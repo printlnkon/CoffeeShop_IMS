@@ -16,5 +16,20 @@ namespace CoffeeShop_IMS
         {
             InitializeComponent();
         }
+        private void logIn_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_showPass_CheckedChanged(object sender, EventArgs e)
+        {
+            loginPassword.PasswordChar = showPass.Checked ? '\0' : '*';
+        }
+
+        private void forgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
     }
 }
