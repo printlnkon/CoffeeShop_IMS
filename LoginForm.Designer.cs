@@ -185,8 +185,9 @@
             this.createAcc_btn.Name = "createAcc_btn";
             this.createAcc_btn.Size = new System.Drawing.Size(275, 37);
             this.createAcc_btn.TabIndex = 21;
-            this.createAcc_btn.Text = "Create an account";
+            this.createAcc_btn.Text = "Register Account";
             this.createAcc_btn.UseVisualStyleBackColor = false;
+            this.createAcc_btn.Click += new System.EventHandler(this.createAcc_btn_Click);
             // 
             // LoginForm
             // 
