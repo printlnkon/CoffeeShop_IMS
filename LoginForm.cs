@@ -33,6 +33,13 @@ namespace CoffeeShop_IMS
                         userdetail user = new userdetail();
                         user.setUname((string)reader["username"].ToString());
 
+                        if ((string)reader["usertype"].ToString() == "Admin")
+                        {
+                            AdminDashboard ad = new AdminDashboard();
+                            this.Hide();
+                            ad.Show();
+                        }
+
                         if ((string)reader["usertype"].ToString() == "User")
                         {
                             // ADD MESSAGE BOX TO SHOW USER IS LOGGED IN
@@ -46,12 +53,7 @@ namespace CoffeeShop_IMS
                         //    this.Hide();
                         //    md.Show();
                         //}
-                        //if ((string)reader["usertype"].ToString() == "Admin")
-                        //{
-                        //    AdminDashboard ad = new AdminDashboard();
-                        //    this.Hide();
-                        //    ad.Show();
-                        //}
+                       
                     }
                 }
                 else
