@@ -82,11 +82,6 @@ namespace CoffeeShop_IMS
             loginPassword.PasswordChar = showPass.Checked ? '\0' : '*';
         }
 
-        private void forgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
         private void createAcc_btn_Click(object sender, EventArgs e)
         {
             RegisterForm rf = new RegisterForm();
