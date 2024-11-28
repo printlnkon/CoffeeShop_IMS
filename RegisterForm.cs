@@ -58,7 +58,7 @@ namespace CoffeeShop_IMS
                 }
             }
             else
-                MessageBox.Show("Please fill out all fields.");
+                MessageBox.Show("Please fill out all fields.", "TEST", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static string MD5Hash(string input)
