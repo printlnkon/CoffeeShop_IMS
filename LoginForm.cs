@@ -84,7 +84,9 @@ namespace CoffeeShop_IMS
 
         private void forgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            SendCode sc = new SendCode();
+            sc.ShowDialog();
+            this.Hide();
         }
 
         private void createAcc_btn_Click(object sender, EventArgs e)
