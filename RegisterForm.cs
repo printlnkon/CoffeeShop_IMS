@@ -36,9 +36,9 @@ namespace CoffeeShop_IMS
                         cmd.ExecuteNonQuery();
                         conn.Close();
 
-                        MessageBox.Show("Registered successfully.", "TEST", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Registered Successfully.", "TEST", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //this.Visible = false;
+                        this.Visible = false;
                         LoginForm lf = new LoginForm();
                         lf.ShowDialog();
                         this.Hide();
@@ -75,5 +75,5 @@ namespace CoffeeShop_IMS
         }
 
     }
- }
+}
 

@@ -35,6 +35,7 @@ namespace CoffeeShop_IMS
 
                         if ((string)reader["usertype"].ToString() == "User")
                         {
+                            // ADD MESSAGE BOX TO SHOW USER IS LOGGED IN
                             UserDashboard ud = new UserDashboard();
                             this.Hide();
                             ud.Show();
@@ -55,7 +56,7 @@ namespace CoffeeShop_IMS
                 }
                 else
                 {
-                    MessageBox.Show("Please try again.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    MessageBox.Show("Username or password was incorrect.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 }
             }
             catch (Exception x)
@@ -75,7 +76,6 @@ namespace CoffeeShop_IMS
             }
             return hash.ToString();
         }
-
 
         private void login_showPass_CheckedChanged(object sender, EventArgs e)
         {
