@@ -24,14 +24,14 @@ namespace CoffeeShop_IMS
 
         private void Register_btn_Click(object sender, System.EventArgs e)
         {
-            if (fName.Text != "" && lName.Text != "" && uName.Text != "" && contactNo.Text != "" && password.Text != "" && cPassword.Text != "")
+            if (fName.Text != "" && lName.Text != "" && uName.Text != "" && contactNo.Text != "" && registerPassword.Text != "" && cPassword.Text != "")
             {
-                if (password.Text == cPassword.Text)
+                if (registerPassword.Text == cPassword.Text)
                 {
                     try
                     {
                         MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;");
-                        string query = "INSERT INTO `users` (`firstName`,`lastName`,`username`,`phoneNo`,`password`) VALUES ('" + fName.Text.Trim() + "','" + lName.Text.Trim() + "','" + uName.Text.Trim() + "','" + contactNo.Text.Trim() + "','" + MD5Hash(password.Text.Trim()) + "')";
+                        string query = "INSERT INTO `users` (`firstName`,`lastName`,`userName`,`contactNo`,`password`) VALUES ('" + fName.Text.Trim() + "','" + lName.Text.Trim() + "','" + uName.Text.Trim() + "','" + contactNo.Text.Trim() + "','" + MD5Hash(registerPassword.Text.Trim()) + "')";
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         conn.Open();
                         cmd.ExecuteNonQuery();
@@ -75,6 +75,10 @@ namespace CoffeeShop_IMS
             return hash.ToString();
         }
 
+        private void showPass_CheckedChanged(object sender, EventArgs e)
+        {
+            registerPassword.PasswordChar = showPass.Checked ? '\0' : '*';
+        }
     }
 }
 

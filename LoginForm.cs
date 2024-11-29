@@ -27,15 +27,15 @@ namespace CoffeeShop_IMS
                     MySqlCommand cmd = new MySqlCommand("SELECT * FROM users WHERE username='" + loginUsername.Text.Trim() + "'and password='" + MD5Hash(loginPassword.Text.Trim()) + "'", conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();
-                    MySqlDataReader reader;
-                    reader = cmd.ExecuteReader();
+                    MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        userdetail user = new userdetail();
+                        userDetails user = new userDetails();
                         user.setUname((string)reader["username"].ToString());
 
                         if ((string)reader["usertype"].ToString() == "Admin")
                         {
+                            MessageBox.Show($"Welcome, {loginUsername.Text}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             AdminDashboard ad = new AdminDashboard();
                             this.Hide();
                             ad.Show();
@@ -43,7 +43,6 @@ namespace CoffeeShop_IMS
 
                         if ((string)reader["usertype"].ToString() == "User")
                         {
-                            // ADD MESSAGE BOX TO SHOW USER IS LOGGED IN
                             UserDashboard ud = new UserDashboard();
                             this.Hide();
                             ud.Show();

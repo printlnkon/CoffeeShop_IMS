@@ -46,7 +46,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(99)))), ((int)(((byte)(102)))));
+            this.panel1.BackColor = System.Drawing.Color.Sienna;
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -90,11 +90,11 @@
             // 
             // logIn_btn
             // 
-            this.logIn_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(99)))), ((int)(((byte)(102)))));
+            this.logIn_btn.BackColor = System.Drawing.Color.Tan;
             this.logIn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logIn_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logIn_btn.ForeColor = System.Drawing.Color.White;
-            this.logIn_btn.Location = new System.Drawing.Point(300, 242);
+            this.logIn_btn.Location = new System.Drawing.Point(300, 244);
             this.logIn_btn.Name = "logIn_btn";
             this.logIn_btn.Size = new System.Drawing.Size(275, 37);
             this.logIn_btn.TabIndex = 3;
@@ -106,7 +106,7 @@
             // 
             this.showPass.AutoSize = true;
             this.showPass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showPass.Location = new System.Drawing.Point(554, 208);
+            this.showPass.Location = new System.Drawing.Point(554, 209);
             this.showPass.Name = "showPass";
             this.showPass.Size = new System.Drawing.Size(15, 14);
             this.showPass.TabIndex = 2;
@@ -117,6 +117,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Sienna;
             this.label4.Location = new System.Drawing.Point(300, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 17);
@@ -126,7 +127,7 @@
             // loginUsername
             // 
             this.loginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginUsername.Location = new System.Drawing.Point(300, 131);
+            this.loginUsername.Location = new System.Drawing.Point(300, 130);
             this.loginUsername.Multiline = true;
             this.loginUsername.Name = "loginUsername";
             this.loginUsername.Size = new System.Drawing.Size(275, 26);
@@ -136,7 +137,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(300, 100);
+            this.label3.ForeColor = System.Drawing.Color.Sienna;
+            this.label3.Location = new System.Drawing.Point(300, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 17);
             this.label3.TabIndex = 13;
@@ -145,17 +147,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(300, 64);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Sienna;
+            this.label2.Location = new System.Drawing.Point(296, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 22);
+            this.label2.Size = new System.Drawing.Size(115, 32);
             this.label2.TabIndex = 12;
             this.label2.Text = "SIGN IN";
             // 
             // loginPassword
             // 
             this.loginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginPassword.Location = new System.Drawing.Point(300, 202);
+            this.loginPassword.Location = new System.Drawing.Point(300, 203);
             this.loginPassword.Multiline = true;
             this.loginPassword.Name = "loginPassword";
             this.loginPassword.PasswordChar = '*';
@@ -164,7 +167,7 @@
             // 
             // createAcc_btn
             // 
-            this.createAcc_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(99)))), ((int)(((byte)(102)))));
+            this.createAcc_btn.BackColor = System.Drawing.Color.Tan;
             this.createAcc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createAcc_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createAcc_btn.ForeColor = System.Drawing.Color.White;
@@ -180,6 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(611, 415);
             this.Controls.Add(this.createAcc_btn);
             this.Controls.Add(this.logIn_btn);

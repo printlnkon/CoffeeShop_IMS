@@ -1,6 +1,6 @@
 ﻿namespace CoffeeShop_IMS
 {
-    internal class userdetail
+    internal class userDetails
     {
         private static string uname;
         public void setUname(string name)

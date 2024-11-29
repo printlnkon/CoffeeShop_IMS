@@ -44,50 +44,67 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.createUser_btn = new System.Windows.Forms.Button();
             this.userManagementPanel = new System.Windows.Forms.Panel();
-            this.dashboard_panel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.userManagement_btn = new System.Windows.Forms.Button();
             this.usersCatalogContainer = new System.Windows.Forms.Panel();
             this.usersCatalog_btn = new System.Windows.Forms.Button();
+            this.dashboardPanel = new System.Windows.Forms.Panel();
+            this.checkOrdersPanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.checkItemsPanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.checkManagerPanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.checkUserPanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.adminDashboard_label = new System.Windows.Forms.Label();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.userTimer = new System.Windows.Forms.Timer(this.components);
-            this.createUserContainer = new System.Windows.Forms.Panel();
+            this.createUserPanel = new System.Windows.Forms.Panel();
+            this.clear_btn = new System.Windows.Forms.Button();
+            this.showPass = new System.Windows.Forms.CheckBox();
+            this.createUserAccount_btn = new System.Windows.Forms.Button();
+            this.confirmPassword_txtBox = new System.Windows.Forms.TextBox();
+            this.createPassword_txtBox = new System.Windows.Forms.TextBox();
+            this.contactNo_txtBox = new System.Windows.Forms.TextBox();
+            this.lastName_txtBox = new System.Windows.Forms.TextBox();
+            this.userName_txtBox = new System.Windows.Forms.TextBox();
+            this.firstName_txtBox = new System.Windows.Forms.TextBox();
             this.createuserAccount_label = new System.Windows.Forms.Label();
-            this.typecomboTxt = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.MphoneTxt = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.userType_comboBox = new System.Windows.Forms.ComboBox();
+            this.userType_label = new System.Windows.Forms.Label();
+            this.confirmPassword_label = new System.Windows.Forms.Label();
+            this.password_label = new System.Windows.Forms.Label();
+            this.contactNo_label = new System.Windows.Forms.Label();
+            this.username_label = new System.Windows.Forms.Label();
+            this.lastName_label = new System.Windows.Forms.Label();
+            this.firstName_label = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
-            this.dashboardContianer = new System.Windows.Forms.Panel();
-            this.dashboard_label = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.greetingPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel14 = new System.Windows.Forms.Panel();
+            this.helloGreeting = new System.Windows.Forms.Label();
+            this.editUserPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.updateAccount = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.menuContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu_btn)).BeginInit();
@@ -97,26 +114,20 @@
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.userManagementPanel.SuspendLayout();
-            this.dashboard_panel.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.usersCatalogContainer.SuspendLayout();
-            this.createUserContainer.SuspendLayout();
-            this.dashboardContianer.SuspendLayout();
-            this.panel13.SuspendLayout();
+            this.dashboardPanel.SuspendLayout();
+            this.checkOrdersPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.checkItemsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.checkManagerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.checkUserPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.createUserPanel.SuspendLayout();
+            this.greetingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.editUserPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -128,10 +139,10 @@
             this.sidebar.Controls.Add(this.usersCatalogContainer);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.MaximumSize = new System.Drawing.Size(306, 719);
-            this.sidebar.MinimumSize = new System.Drawing.Size(71, 719);
+            this.sidebar.MaximumSize = new System.Drawing.Size(280, 720);
+            this.sidebar.MinimumSize = new System.Drawing.Size(71, 720);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(306, 719);
+            this.sidebar.Size = new System.Drawing.Size(280, 720);
             this.sidebar.TabIndex = 0;
             // 
             // menuContainer
@@ -257,6 +268,7 @@
             this.editUser_btn.Text = "                Edit User";
             this.editUser_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.editUser_btn.UseVisualStyleBackColor = false;
+            this.editUser_btn.Click += new System.EventHandler(this.editUser_btn_Click);
             // 
             // panel7
             // 
@@ -288,177 +300,15 @@
             // userManagementPanel
             // 
             this.userManagementPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.userManagementPanel.Controls.Add(this.dashboard_panel);
             this.userManagementPanel.Controls.Add(this.userManagement_btn);
             this.userManagementPanel.Location = new System.Drawing.Point(0, 0);
             this.userManagementPanel.Name = "userManagementPanel";
             this.userManagementPanel.Size = new System.Drawing.Size(335, 61);
             this.userManagementPanel.TabIndex = 7;
             // 
-            // dashboard_panel
-            // 
-            this.dashboard_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dashboard_panel.Controls.Add(this.panel5);
-            this.dashboard_panel.Controls.Add(this.panel3);
-            this.dashboard_panel.Controls.Add(this.panel4);
-            this.dashboard_panel.Controls.Add(this.panel9);
-            this.dashboard_panel.Controls.Add(this.label3);
-            this.dashboard_panel.Location = new System.Drawing.Point(308, 2);
-            this.dashboard_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.dashboard_panel.Name = "dashboard_panel";
-            this.dashboard_panel.Size = new System.Drawing.Size(979, 485);
-            this.dashboard_panel.TabIndex = 70;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(64)))), ((int)(((byte)(49)))));
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(702, 115);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(181, 221);
-            this.panel5.TabIndex = 67;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(40, 136);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 15);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Check Orders";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(35, 18);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(111, 102);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(92)))));
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Location = new System.Drawing.Point(501, 115);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(181, 221);
-            this.panel3.TabIndex = 67;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(44, 136);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 15);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Check Items";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(37, 17);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(39)))), ((int)(((byte)(153)))));
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(300, 115);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(181, 221);
-            this.panel4.TabIndex = 67;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(22, 136);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 15);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Check Manager Activity";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(35, 18);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(111, 102);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(161)))));
-            this.panel9.Controls.Add(this.label4);
-            this.panel9.Controls.Add(this.pictureBox2);
-            this.panel9.Location = new System.Drawing.Point(99, 115);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(181, 221);
-            this.panel9.TabIndex = 67;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(34, 136);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Check User Activity";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 17);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(403, 17);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Admin Dashboard";
-            // 
             // userManagement_btn
             // 
-            this.userManagement_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.userManagement_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.userManagement_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.userManagement_btn.FlatAppearance.BorderSize = 0;
             this.userManagement_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -499,6 +349,181 @@
             this.usersCatalog_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.usersCatalog_btn.UseVisualStyleBackColor = false;
             // 
+            // dashboardPanel
+            // 
+            this.dashboardPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dashboardPanel.Controls.Add(this.checkOrdersPanel);
+            this.dashboardPanel.Controls.Add(this.checkItemsPanel);
+            this.dashboardPanel.Controls.Add(this.checkManagerPanel);
+            this.dashboardPanel.Controls.Add(this.checkUserPanel);
+            this.dashboardPanel.Controls.Add(this.adminDashboard_label);
+            this.dashboardPanel.Location = new System.Drawing.Point(280, 168);
+            this.dashboardPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.dashboardPanel.MaximumSize = new System.Drawing.Size(1160, 550);
+            this.dashboardPanel.MinimumSize = new System.Drawing.Size(947, 438);
+            this.dashboardPanel.Name = "dashboardPanel";
+            this.dashboardPanel.Size = new System.Drawing.Size(951, 549);
+            this.dashboardPanel.TabIndex = 70;
+            // 
+            // checkOrdersPanel
+            // 
+            this.checkOrdersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkOrdersPanel.BackColor = System.Drawing.Color.Tan;
+            this.checkOrdersPanel.Controls.Add(this.label7);
+            this.checkOrdersPanel.Controls.Add(this.pictureBox4);
+            this.checkOrdersPanel.Location = new System.Drawing.Point(727, 137);
+            this.checkOrdersPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkOrdersPanel.Name = "checkOrdersPanel";
+            this.checkOrdersPanel.Size = new System.Drawing.Size(181, 221);
+            this.checkOrdersPanel.TabIndex = 67;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(42, 139);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 16);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Check Orders";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // checkItemsPanel
+            // 
+            this.checkItemsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkItemsPanel.BackColor = System.Drawing.Color.Tan;
+            this.checkItemsPanel.Controls.Add(this.label8);
+            this.checkItemsPanel.Controls.Add(this.pictureBox5);
+            this.checkItemsPanel.Location = new System.Drawing.Point(506, 137);
+            this.checkItemsPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkItemsPanel.Name = "checkItemsPanel";
+            this.checkItemsPanel.Size = new System.Drawing.Size(181, 221);
+            this.checkItemsPanel.TabIndex = 67;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(46, 139);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Check Items";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // checkManagerPanel
+            // 
+            this.checkManagerPanel.BackColor = System.Drawing.Color.Tan;
+            this.checkManagerPanel.Controls.Add(this.label5);
+            this.checkManagerPanel.Controls.Add(this.pictureBox3);
+            this.checkManagerPanel.Location = new System.Drawing.Point(272, 137);
+            this.checkManagerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkManagerPanel.Name = "checkManagerPanel";
+            this.checkManagerPanel.Size = new System.Drawing.Size(181, 221);
+            this.checkManagerPanel.TabIndex = 67;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(7, 139);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Check Manager Activity";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // checkUserPanel
+            // 
+            this.checkUserPanel.BackColor = System.Drawing.Color.Tan;
+            this.checkUserPanel.Controls.Add(this.label4);
+            this.checkUserPanel.Controls.Add(this.pictureBox2);
+            this.checkUserPanel.Location = new System.Drawing.Point(38, 137);
+            this.checkUserPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkUserPanel.Name = "checkUserPanel";
+            this.checkUserPanel.Size = new System.Drawing.Size(181, 221);
+            this.checkUserPanel.TabIndex = 67;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(25, 139);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Check User Activity";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // adminDashboard_label
+            // 
+            this.adminDashboard_label.AutoSize = true;
+            this.adminDashboard_label.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDashboard_label.ForeColor = System.Drawing.Color.Sienna;
+            this.adminDashboard_label.Location = new System.Drawing.Point(10, 14);
+            this.adminDashboard_label.Name = "adminDashboard_label";
+            this.adminDashboard_label.Size = new System.Drawing.Size(449, 56);
+            this.adminDashboard_label.TabIndex = 68;
+            this.adminDashboard_label.Text = "Admin Dashboard";
+            // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
@@ -509,307 +534,555 @@
             this.userTimer.Interval = 10;
             this.userTimer.Tick += new System.EventHandler(this.userTimer_Tick);
             // 
-            // createUserContainer
+            // createUserPanel
             // 
-            this.createUserContainer.Controls.Add(this.createuserAccount_label);
-            this.createUserContainer.Controls.Add(this.typecomboTxt);
-            this.createUserContainer.Controls.Add(this.dashboardContianer);
-            this.createUserContainer.Controls.Add(this.label14);
-            this.createUserContainer.Controls.Add(this.label12);
-            this.createUserContainer.Controls.Add(this.label13);
-            this.createUserContainer.Controls.Add(this.MphoneTxt);
-            this.createUserContainer.Controls.Add(this.label11);
-            this.createUserContainer.Controls.Add(this.label10);
-            this.createUserContainer.Controls.Add(this.label9);
-            this.createUserContainer.Location = new System.Drawing.Point(311, 166);
-            this.createUserContainer.Margin = new System.Windows.Forms.Padding(2);
-            this.createUserContainer.Name = "createUserContainer";
-            this.createUserContainer.Size = new System.Drawing.Size(920, 562);
-            this.createUserContainer.TabIndex = 68;
+            this.createUserPanel.Controls.Add(this.clear_btn);
+            this.createUserPanel.Controls.Add(this.showPass);
+            this.createUserPanel.Controls.Add(this.createUserAccount_btn);
+            this.createUserPanel.Controls.Add(this.confirmPassword_txtBox);
+            this.createUserPanel.Controls.Add(this.createPassword_txtBox);
+            this.createUserPanel.Controls.Add(this.contactNo_txtBox);
+            this.createUserPanel.Controls.Add(this.lastName_txtBox);
+            this.createUserPanel.Controls.Add(this.userName_txtBox);
+            this.createUserPanel.Controls.Add(this.firstName_txtBox);
+            this.createUserPanel.Controls.Add(this.createuserAccount_label);
+            this.createUserPanel.Controls.Add(this.userType_comboBox);
+            this.createUserPanel.Controls.Add(this.userType_label);
+            this.createUserPanel.Controls.Add(this.confirmPassword_label);
+            this.createUserPanel.Controls.Add(this.password_label);
+            this.createUserPanel.Controls.Add(this.contactNo_label);
+            this.createUserPanel.Controls.Add(this.username_label);
+            this.createUserPanel.Controls.Add(this.lastName_label);
+            this.createUserPanel.Controls.Add(this.firstName_label);
+            this.createUserPanel.Location = new System.Drawing.Point(280, 168);
+            this.createUserPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.createUserPanel.Name = "createUserPanel";
+            this.createUserPanel.Size = new System.Drawing.Size(947, 551);
+            this.createUserPanel.TabIndex = 68;
+            // 
+            // clear_btn
+            // 
+            this.clear_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clear_btn.BackColor = System.Drawing.Color.Tan;
+            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_btn.ForeColor = System.Drawing.Color.White;
+            this.clear_btn.Location = new System.Drawing.Point(488, 401);
+            this.clear_btn.Name = "clear_btn";
+            this.clear_btn.Size = new System.Drawing.Size(190, 39);
+            this.clear_btn.TabIndex = 33;
+            this.clear_btn.Text = "Clear";
+            this.clear_btn.UseVisualStyleBackColor = false;
+            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
+            // 
+            // showPass
+            // 
+            this.showPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.showPass.AutoSize = true;
+            this.showPass.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPass.Location = new System.Drawing.Point(821, 151);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(15, 14);
+            this.showPass.TabIndex = 32;
+            this.showPass.UseVisualStyleBackColor = true;
+            this.showPass.CheckedChanged += new System.EventHandler(this.showPass_CheckedChanged);
+            // 
+            // createUserAccount_btn
+            // 
+            this.createUserAccount_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.createUserAccount_btn.BackColor = System.Drawing.Color.Sienna;
+            this.createUserAccount_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createUserAccount_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createUserAccount_btn.ForeColor = System.Drawing.Color.White;
+            this.createUserAccount_btn.Location = new System.Drawing.Point(707, 401);
+            this.createUserAccount_btn.Name = "createUserAccount_btn";
+            this.createUserAccount_btn.Size = new System.Drawing.Size(190, 39);
+            this.createUserAccount_btn.TabIndex = 31;
+            this.createUserAccount_btn.Text = "Register Account";
+            this.createUserAccount_btn.UseVisualStyleBackColor = false;
+            this.createUserAccount_btn.Click += new System.EventHandler(this.createUserAccount_btn_Click);
+            // 
+            // confirmPassword_txtBox
+            // 
+            this.confirmPassword_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmPassword_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPassword_txtBox.Location = new System.Drawing.Point(569, 231);
+            this.confirmPassword_txtBox.Multiline = true;
+            this.confirmPassword_txtBox.Name = "confirmPassword_txtBox";
+            this.confirmPassword_txtBox.PasswordChar = '*';
+            this.confirmPassword_txtBox.Size = new System.Drawing.Size(275, 28);
+            this.confirmPassword_txtBox.TabIndex = 5;
+            // 
+            // createPassword_txtBox
+            // 
+            this.createPassword_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.createPassword_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createPassword_txtBox.Location = new System.Drawing.Point(569, 144);
+            this.createPassword_txtBox.Multiline = true;
+            this.createPassword_txtBox.Name = "createPassword_txtBox";
+            this.createPassword_txtBox.PasswordChar = '*';
+            this.createPassword_txtBox.Size = new System.Drawing.Size(275, 28);
+            this.createPassword_txtBox.TabIndex = 4;
+            // 
+            // contactNo_txtBox
+            // 
+            this.contactNo_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNo_txtBox.Location = new System.Drawing.Point(74, 414);
+            this.contactNo_txtBox.Multiline = true;
+            this.contactNo_txtBox.Name = "contactNo_txtBox";
+            this.contactNo_txtBox.Size = new System.Drawing.Size(275, 26);
+            this.contactNo_txtBox.TabIndex = 3;
+            // 
+            // lastName_txtBox
+            // 
+            this.lastName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastName_txtBox.Location = new System.Drawing.Point(74, 234);
+            this.lastName_txtBox.Multiline = true;
+            this.lastName_txtBox.Name = "lastName_txtBox";
+            this.lastName_txtBox.Size = new System.Drawing.Size(275, 26);
+            this.lastName_txtBox.TabIndex = 1;
+            // 
+            // userName_txtBox
+            // 
+            this.userName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userName_txtBox.Location = new System.Drawing.Point(74, 324);
+            this.userName_txtBox.Multiline = true;
+            this.userName_txtBox.Name = "userName_txtBox";
+            this.userName_txtBox.Size = new System.Drawing.Size(275, 26);
+            this.userName_txtBox.TabIndex = 2;
+            // 
+            // firstName_txtBox
+            // 
+            this.firstName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstName_txtBox.Location = new System.Drawing.Point(74, 144);
+            this.firstName_txtBox.Multiline = true;
+            this.firstName_txtBox.Name = "firstName_txtBox";
+            this.firstName_txtBox.Size = new System.Drawing.Size(275, 26);
+            this.firstName_txtBox.TabIndex = 0;
             // 
             // createuserAccount_label
             // 
             this.createuserAccount_label.AutoSize = true;
-            this.createuserAccount_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createuserAccount_label.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createuserAccount_label.ForeColor = System.Drawing.Color.Sienna;
             this.createuserAccount_label.Location = new System.Drawing.Point(3, 4);
             this.createuserAccount_label.Name = "createuserAccount_label";
-            this.createuserAccount_label.Size = new System.Drawing.Size(471, 55);
+            this.createuserAccount_label.Size = new System.Drawing.Size(509, 56);
             this.createuserAccount_label.TabIndex = 20;
             this.createuserAccount_label.Text = "Create User Account";
             // 
-            // typecomboTxt
+            // userType_comboBox
             // 
-            this.typecomboTxt.FormattingEnabled = true;
-            this.typecomboTxt.Items.AddRange(new object[] {
-            "member",
-            "manager"});
-            this.typecomboTxt.Location = new System.Drawing.Point(562, 301);
-            this.typecomboTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.typecomboTxt.Name = "typecomboTxt";
-            this.typecomboTxt.Size = new System.Drawing.Size(259, 21);
-            this.typecomboTxt.TabIndex = 19;
+            this.userType_comboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userType_comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userType_comboBox.FormattingEnabled = true;
+            this.userType_comboBox.Items.AddRange(new object[] {
+            "Manager",
+            "User"});
+            this.userType_comboBox.Location = new System.Drawing.Point(569, 321);
+            this.userType_comboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.userType_comboBox.Name = "userType_comboBox";
+            this.userType_comboBox.Size = new System.Drawing.Size(275, 28);
+            this.userType_comboBox.TabIndex = 6;
             // 
-            // label14
+            // userType_label
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
-            this.label14.Location = new System.Drawing.Point(562, 250);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 24);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "User Type";
+            this.userType_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userType_label.AutoSize = true;
+            this.userType_label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userType_label.ForeColor = System.Drawing.Color.Sienna;
+            this.userType_label.Location = new System.Drawing.Point(569, 285);
+            this.userType_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.userType_label.Name = "userType_label";
+            this.userType_label.Size = new System.Drawing.Size(109, 24);
+            this.userType_label.TabIndex = 18;
+            this.userType_label.Text = "User Type:";
             // 
-            // label12
+            // confirmPassword_label
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
-            this.label12.Location = new System.Drawing.Point(562, 181);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(208, 24);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Confirm Password : ";
+            this.confirmPassword_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.confirmPassword_label.AutoSize = true;
+            this.confirmPassword_label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPassword_label.ForeColor = System.Drawing.Color.Sienna;
+            this.confirmPassword_label.Location = new System.Drawing.Point(569, 190);
+            this.confirmPassword_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.confirmPassword_label.Name = "confirmPassword_label";
+            this.confirmPassword_label.Size = new System.Drawing.Size(208, 24);
+            this.confirmPassword_label.TabIndex = 15;
+            this.confirmPassword_label.Text = "Confirm Password : ";
             // 
-            // label13
+            // password_label
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
-            this.label13.Location = new System.Drawing.Point(562, 108);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(121, 24);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Password : ";
+            this.password_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.password_label.AutoSize = true;
+            this.password_label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_label.ForeColor = System.Drawing.Color.Sienna;
+            this.password_label.Location = new System.Drawing.Point(569, 98);
+            this.password_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.password_label.Name = "password_label";
+            this.password_label.Size = new System.Drawing.Size(121, 24);
+            this.password_label.TabIndex = 13;
+            this.password_label.Text = "Password : ";
             // 
-            // MphoneTxt
+            // contactNo_label
             // 
-            this.MphoneTxt.AutoSize = true;
-            this.MphoneTxt.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MphoneTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
-            this.MphoneTxt.Location = new System.Drawing.Point(70, 316);
-            this.MphoneTxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.MphoneTxt.Name = "MphoneTxt";
-            this.MphoneTxt.Size = new System.Drawing.Size(142, 24);
-            this.MphoneTxt.TabIndex = 11;
-            this.MphoneTxt.Text = "Contact No.:";
+            this.contactNo_label.AutoSize = true;
+            this.contactNo_label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNo_label.ForeColor = System.Drawing.Color.Sienna;
+            this.contactNo_label.Location = new System.Drawing.Point(74, 370);
+            this.contactNo_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.contactNo_label.Name = "contactNo_label";
+            this.contactNo_label.Size = new System.Drawing.Size(142, 24);
+            this.contactNo_label.TabIndex = 11;
+            this.contactNo_label.Text = "Contact No.:";
             // 
-            // label11
+            // username_label
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
-            this.label11.Location = new System.Drawing.Point(70, 243);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 24);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Username: ";
+            this.username_label.AutoSize = true;
+            this.username_label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username_label.ForeColor = System.Drawing.Color.Sienna;
+            this.username_label.Location = new System.Drawing.Point(74, 280);
+            this.username_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.username_label.Name = "username_label";
+            this.username_label.Size = new System.Drawing.Size(124, 24);
+            this.username_label.TabIndex = 9;
+            this.username_label.Text = "Username: ";
             // 
-            // label10
+            // lastName_label
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
-            this.label10.Location = new System.Drawing.Point(70, 172);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 24);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Last Name: ";
+            this.lastName_label.AutoSize = true;
+            this.lastName_label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastName_label.ForeColor = System.Drawing.Color.Sienna;
+            this.lastName_label.Location = new System.Drawing.Point(74, 190);
+            this.lastName_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lastName_label.Name = "lastName_label";
+            this.lastName_label.Size = new System.Drawing.Size(131, 24);
+            this.lastName_label.TabIndex = 7;
+            this.lastName_label.Text = "Last Name: ";
             // 
-            // label9
+            // firstName_label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
-            this.label9.Location = new System.Drawing.Point(70, 100);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 24);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "First Name:";
+            this.firstName_label.AutoSize = true;
+            this.firstName_label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstName_label.ForeColor = System.Drawing.Color.Sienna;
+            this.firstName_label.Location = new System.Drawing.Point(74, 100);
+            this.firstName_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.firstName_label.Name = "firstName_label";
+            this.firstName_label.Size = new System.Drawing.Size(120, 24);
+            this.firstName_label.TabIndex = 5;
+            this.firstName_label.Text = "First Name:";
             // 
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.Sienna;
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.Location = new System.Drawing.Point(306, 0);
+            this.headerPanel.Location = new System.Drawing.Point(280, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(916, 35);
+            this.headerPanel.Size = new System.Drawing.Size(939, 96);
             this.headerPanel.TabIndex = 69;
             // 
-            // dashboardContianer
+            // greetingPanel
             // 
-            this.dashboardContianer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dashboardContianer.Controls.Add(this.dashboard_label);
-            this.dashboardContianer.Controls.Add(this.panel13);
-            this.dashboardContianer.Controls.Add(this.panel14);
-            this.dashboardContianer.Controls.Add(this.panel15);
-            this.dashboardContianer.Controls.Add(this.panel16);
-            this.dashboardContianer.Location = new System.Drawing.Point(13, 165);
-            this.dashboardContianer.Margin = new System.Windows.Forms.Padding(2);
-            this.dashboardContianer.Name = "dashboardContianer";
-            this.dashboardContianer.Size = new System.Drawing.Size(920, 563);
-            this.dashboardContianer.TabIndex = 70;
-            // 
-            // dashboard_label
-            // 
-            this.dashboard_label.AutoSize = true;
-            this.dashboard_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_label.Location = new System.Drawing.Point(9, 8);
-            this.dashboard_label.Name = "dashboard_label";
-            this.dashboard_label.Size = new System.Drawing.Size(261, 55);
-            this.dashboard_label.TabIndex = 68;
-            this.dashboard_label.Text = "Dashboard";
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(64)))), ((int)(((byte)(49)))));
-            this.panel13.Controls.Add(this.label1);
-            this.panel13.Controls.Add(this.pictureBox1);
-            this.panel13.Location = new System.Drawing.Point(668, 175);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(181, 221);
-            this.panel13.TabIndex = 67;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(40, 136);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Check Orders";
+            this.greetingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.greetingPanel.BackColor = System.Drawing.Color.Tan;
+            this.greetingPanel.Controls.Add(this.pictureBox1);
+            this.greetingPanel.Controls.Add(this.helloGreeting);
+            this.greetingPanel.Location = new System.Drawing.Point(1073, -2);
+            this.greetingPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.greetingPanel.Name = "greetingPanel";
+            this.greetingPanel.Size = new System.Drawing.Size(115, 130);
+            this.greetingPanel.TabIndex = 71;
+            this.greetingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.greetingPanel_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(35, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 102);
+            this.pictureBox1.Size = new System.Drawing.Size(89, 83);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // panel14
+            // helloGreeting
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(92)))));
-            this.panel14.Controls.Add(this.label2);
-            this.panel14.Controls.Add(this.pictureBox6);
-            this.panel14.Location = new System.Drawing.Point(467, 175);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(181, 221);
-            this.panel14.TabIndex = 67;
+            this.helloGreeting.AutoSize = true;
+            this.helloGreeting.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helloGreeting.ForeColor = System.Drawing.Color.White;
+            this.helloGreeting.Location = new System.Drawing.Point(1, 105);
+            this.helloGreeting.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.helloGreeting.Name = "helloGreeting";
+            this.helloGreeting.Size = new System.Drawing.Size(56, 19);
+            this.helloGreeting.TabIndex = 3;
+            this.helloGreeting.Text = "Hello, ";
+            // 
+            // editUserPanel
+            // 
+            this.editUserPanel.Controls.Add(this.button1);
+            this.editUserPanel.Controls.Add(this.checkBox1);
+            this.editUserPanel.Controls.Add(this.updateAccount);
+            this.editUserPanel.Controls.Add(this.textBox1);
+            this.editUserPanel.Controls.Add(this.textBox2);
+            this.editUserPanel.Controls.Add(this.textBox3);
+            this.editUserPanel.Controls.Add(this.textBox4);
+            this.editUserPanel.Controls.Add(this.textBox5);
+            this.editUserPanel.Controls.Add(this.textBox6);
+            this.editUserPanel.Controls.Add(this.label1);
+            this.editUserPanel.Controls.Add(this.comboBox1);
+            this.editUserPanel.Controls.Add(this.label2);
+            this.editUserPanel.Controls.Add(this.label3);
+            this.editUserPanel.Controls.Add(this.label6);
+            this.editUserPanel.Controls.Add(this.label9);
+            this.editUserPanel.Controls.Add(this.label10);
+            this.editUserPanel.Controls.Add(this.label11);
+            this.editUserPanel.Controls.Add(this.label12);
+            this.editUserPanel.Location = new System.Drawing.Point(280, 168);
+            this.editUserPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.editUserPanel.Name = "editUserPanel";
+            this.editUserPanel.Size = new System.Drawing.Size(951, 547);
+            this.editUserPanel.TabIndex = 69;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Tan;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(492, 401);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 35);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(825, 151);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 32;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // updateAccount
+            // 
+            this.updateAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateAccount.BackColor = System.Drawing.Color.Sienna;
+            this.updateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateAccount.ForeColor = System.Drawing.Color.White;
+            this.updateAccount.Location = new System.Drawing.Point(711, 401);
+            this.updateAccount.Name = "updateAccount";
+            this.updateAccount.Size = new System.Drawing.Size(190, 35);
+            this.updateAccount.TabIndex = 31;
+            this.updateAccount.Text = "Update Account";
+            this.updateAccount.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(573, 231);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(275, 24);
+            this.textBox1.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(573, 144);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(275, 24);
+            this.textBox2.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(74, 414);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(275, 26);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(74, 234);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(275, 26);
+            this.textBox4.TabIndex = 1;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(74, 324);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(275, 26);
+            this.textBox5.TabIndex = 2;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(74, 144);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(275, 26);
+            this.textBox6.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Sienna;
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(432, 56);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Edit User Account";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Manager",
+            "User"});
+            this.comboBox1.Location = new System.Drawing.Point(573, 321);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(275, 28);
+            this.comboBox1.TabIndex = 6;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(44, 136);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Sienna;
+            this.label2.Location = new System.Drawing.Point(573, 285);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Check Items";
+            this.label2.Size = new System.Drawing.Size(109, 24);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "User Type:";
             // 
-            // pictureBox6
+            // label3
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(37, 17);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(39)))), ((int)(((byte)(153)))));
-            this.panel15.Controls.Add(this.label6);
-            this.panel15.Controls.Add(this.pictureBox7);
-            this.panel15.Location = new System.Drawing.Point(266, 175);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(181, 221);
-            this.panel15.TabIndex = 67;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Sienna;
+            this.label3.Location = new System.Drawing.Point(573, 190);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(208, 24);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Confirm Password : ";
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(22, 136);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Sienna;
+            this.label6.Location = new System.Drawing.Point(573, 98);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 15);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Check Manager Activity";
+            this.label6.Size = new System.Drawing.Size(121, 24);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Password : ";
             // 
-            // pictureBox7
+            // label9
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(35, 18);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(111, 102);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Sienna;
+            this.label9.Location = new System.Drawing.Point(74, 370);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(142, 24);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Contact No.:";
             // 
-            // panel16
+            // label10
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(161)))));
-            this.panel16.Controls.Add(this.label15);
-            this.panel16.Controls.Add(this.pictureBox8);
-            this.panel16.Location = new System.Drawing.Point(65, 175);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(181, 221);
-            this.panel16.TabIndex = 67;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Sienna;
+            this.label10.Location = new System.Drawing.Point(74, 280);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(124, 24);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Username: ";
             // 
-            // label15
+            // label11
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(34, 136);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(127, 15);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Check User Activity";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Sienna;
+            this.label11.Location = new System.Drawing.Point(74, 190);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 24);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Last Name: ";
             // 
-            // pictureBox8
+            // label12
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(37, 17);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Sienna;
+            this.label12.Location = new System.Drawing.Point(74, 100);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 24);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "First Name:";
             // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 719);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1219, 698);
+            this.Controls.Add(this.editUserPanel);
+            this.Controls.Add(this.greetingPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.createUserContainer);
+            this.Controls.Add(this.dashboardPanel);
+            this.Controls.Add(this.createUserPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
@@ -825,37 +1098,28 @@
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.userManagementPanel.ResumeLayout(false);
-            this.dashboard_panel.ResumeLayout(false);
-            this.dashboard_panel.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.usersCatalogContainer.ResumeLayout(false);
-            this.createUserContainer.ResumeLayout(false);
-            this.createUserContainer.PerformLayout();
-            this.dashboardContianer.ResumeLayout(false);
-            this.dashboardContianer.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.dashboardPanel.ResumeLayout(false);
+            this.dashboardPanel.PerformLayout();
+            this.checkOrdersPanel.ResumeLayout(false);
+            this.checkOrdersPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.checkItemsPanel.ResumeLayout(false);
+            this.checkItemsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.checkManagerPanel.ResumeLayout(false);
+            this.checkManagerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.checkUserPanel.ResumeLayout(false);
+            this.checkUserPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.createUserPanel.ResumeLayout(false);
+            this.createUserPanel.PerformLayout();
+            this.greetingPanel.ResumeLayout(false);
+            this.greetingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.editUserPanel.ResumeLayout(false);
+            this.editUserPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -881,44 +1145,61 @@
         private System.Windows.Forms.Button usersCatalog_btn;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button deleteUser_btn;
-        private System.Windows.Forms.Panel createUserContainer;
-        private System.Windows.Forms.ComboBox typecomboTxt;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label MphoneTxt;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel createUserPanel;
+        private System.Windows.Forms.ComboBox userType_comboBox;
+        private System.Windows.Forms.Label userType_label;
+        private System.Windows.Forms.Label confirmPassword_label;
+        private System.Windows.Forms.Label password_label;
+        private System.Windows.Forms.Label contactNo_label;
+        private System.Windows.Forms.Label username_label;
+        private System.Windows.Forms.Label lastName_label;
+        private System.Windows.Forms.Label firstName_label;
         private System.Windows.Forms.Label createuserAccount_label;
         private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.Panel dashboard_panel;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel dashboardPanel;
+        private System.Windows.Forms.Label adminDashboard_label;
+        private System.Windows.Forms.Panel checkOrdersPanel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel checkItemsPanel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel checkManagerPanel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel checkUserPanel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel dashboardContianer;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox firstName_txtBox;
+        private System.Windows.Forms.TextBox confirmPassword_txtBox;
+        private System.Windows.Forms.TextBox createPassword_txtBox;
+        private System.Windows.Forms.TextBox contactNo_txtBox;
+        private System.Windows.Forms.TextBox lastName_txtBox;
+        private System.Windows.Forms.TextBox userName_txtBox;
+        private System.Windows.Forms.Button createUserAccount_btn;
+        private System.Windows.Forms.CheckBox showPass;
+        private System.Windows.Forms.Panel greetingPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label helloGreeting;
+        private System.Windows.Forms.Button clear_btn;
+        private System.Windows.Forms.Panel editUserPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button updateAccount;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label dashboard_label;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
