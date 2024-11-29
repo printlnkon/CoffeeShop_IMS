@@ -31,27 +31,23 @@
             this.components = new System.ComponentModel.Container();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.menuLabel = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.dashboard_btn = new System.Windows.Forms.Button();
             this.userContainer = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.editUser_btn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.createUser_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.userButton = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.userTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.usersCatalog_btn = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.deleteUser_btn = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -60,10 +56,8 @@
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -72,6 +66,7 @@
             this.sidebar.Controls.Add(this.panel1);
             this.sidebar.Controls.Add(this.panel6);
             this.sidebar.Controls.Add(this.userContainer);
+            this.sidebar.Controls.Add(this.panel10);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(306, 719);
@@ -82,22 +77,22 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.menuLabel);
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(335, 114);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // menuLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(77, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Menu";
+            this.menuLabel.AutoSize = true;
+            this.menuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLabel.Location = new System.Drawing.Point(77, 47);
+            this.menuLabel.Name = "menuLabel";
+            this.menuLabel.Size = new System.Drawing.Size(59, 24);
+            this.menuLabel.TabIndex = 1;
+            this.menuLabel.Text = "Menu";
             // 
             // menuButton
             // 
@@ -114,37 +109,38 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button5);
+            this.panel6.Controls.Add(this.dashboard_btn);
             this.panel6.Location = new System.Drawing.Point(3, 123);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(335, 73);
+            this.panel6.Size = new System.Drawing.Size(335, 55);
             this.panel6.TabIndex = 5;
             // 
-            // button5
+            // dashboard_btn
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(335, 48);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "            Dashboard";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.dashboard_btn.BackColor = System.Drawing.Color.Transparent;
+            this.dashboard_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.dashboard_btn.FlatAppearance.BorderSize = 0;
+            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_btn.ForeColor = System.Drawing.Color.White;
+            this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboard_btn.Location = new System.Drawing.Point(0, 3);
+            this.dashboard_btn.Name = "dashboard_btn";
+            this.dashboard_btn.Size = new System.Drawing.Size(335, 48);
+            this.dashboard_btn.TabIndex = 0;
+            this.dashboard_btn.Text = "            Dashboard";
+            this.dashboard_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboard_btn.UseVisualStyleBackColor = false;
             // 
             // userContainer
             // 
             this.userContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.userContainer.Controls.Add(this.panel11);
             this.userContainer.Controls.Add(this.panel8);
             this.userContainer.Controls.Add(this.panel7);
             this.userContainer.Controls.Add(this.panel2);
-            this.userContainer.Location = new System.Drawing.Point(3, 202);
-            this.userContainer.MaximumSize = new System.Drawing.Size(335, 155);
+            this.userContainer.Location = new System.Drawing.Point(3, 184);
+            this.userContainer.MaximumSize = new System.Drawing.Size(335, 220);
             this.userContainer.MinimumSize = new System.Drawing.Size(335, 55);
             this.userContainer.Name = "userContainer";
             this.userContainer.Size = new System.Drawing.Size(335, 55);
@@ -153,54 +149,54 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.button7);
+            this.panel8.Controls.Add(this.editUser_btn);
             this.panel8.Location = new System.Drawing.Point(0, 103);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(335, 57);
             this.panel8.TabIndex = 9;
             // 
-            // button7
+            // editUser_btn
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(45)))));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(335, 48);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "            Edit User";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
+            this.editUser_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.editUser_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.editUser_btn.FlatAppearance.BorderSize = 0;
+            this.editUser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editUser_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editUser_btn.ForeColor = System.Drawing.Color.White;
+            this.editUser_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.editUser_btn.Location = new System.Drawing.Point(0, 0);
+            this.editUser_btn.Name = "editUser_btn";
+            this.editUser_btn.Size = new System.Drawing.Size(335, 48);
+            this.editUser_btn.TabIndex = 8;
+            this.editUser_btn.Text = "                Edit User";
+            this.editUser_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.editUser_btn.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.button1);
+            this.panel7.Controls.Add(this.createUser_btn);
             this.panel7.Location = new System.Drawing.Point(0, 53);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(335, 57);
             this.panel7.TabIndex = 8;
             // 
-            // button1
+            // createUser_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(50)))), ((int)(((byte)(45)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(335, 48);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "            Create User";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.createUser_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.createUser_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.createUser_btn.FlatAppearance.BorderSize = 0;
+            this.createUser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createUser_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createUser_btn.ForeColor = System.Drawing.Color.White;
+            this.createUser_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.createUser_btn.Location = new System.Drawing.Point(0, -1);
+            this.createUser_btn.Name = "createUser_btn";
+            this.createUser_btn.Size = new System.Drawing.Size(335, 48);
+            this.createUser_btn.TabIndex = 8;
+            this.createUser_btn.Text = "                Create User";
+            this.createUser_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.createUser_btn.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -229,112 +225,66 @@
             this.userButton.UseVisualStyleBackColor = false;
             this.userButton.Click += new System.EventHandler(this.userButton_Click);
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.button6);
-            this.panel9.Location = new System.Drawing.Point(348, 578);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(335, 73);
-            this.panel9.TabIndex = 7;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(335, 48);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "            Users Catalog";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(899, 393);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(311, 98);
-            this.panel3.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-19, 18);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(276, 62);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "     Create User";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Location = new System.Drawing.Point(899, 497);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(311, 98);
-            this.panel4.TabIndex = 3;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-13, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(270, 62);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Edit User";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button4);
-            this.panel5.Location = new System.Drawing.Point(899, 601);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(311, 98);
-            this.panel5.TabIndex = 4;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-3, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(260, 62);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "     Users Catalog";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // userTimer
             // 
             this.userTimer.Interval = 10;
             this.userTimer.Tick += new System.EventHandler(this.userTimer_Tick);
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.usersCatalog_btn);
+            this.panel10.Location = new System.Drawing.Point(3, 245);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(335, 55);
+            this.panel10.TabIndex = 6;
+            // 
+            // usersCatalog_btn
+            // 
+            this.usersCatalog_btn.BackColor = System.Drawing.Color.Transparent;
+            this.usersCatalog_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.usersCatalog_btn.FlatAppearance.BorderSize = 0;
+            this.usersCatalog_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.usersCatalog_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersCatalog_btn.ForeColor = System.Drawing.Color.White;
+            this.usersCatalog_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.usersCatalog_btn.Location = new System.Drawing.Point(0, 3);
+            this.usersCatalog_btn.Name = "usersCatalog_btn";
+            this.usersCatalog_btn.Size = new System.Drawing.Size(335, 48);
+            this.usersCatalog_btn.TabIndex = 0;
+            this.usersCatalog_btn.Text = "            Users Catalog";
+            this.usersCatalog_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.usersCatalog_btn.UseVisualStyleBackColor = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.deleteUser_btn);
+            this.panel11.Location = new System.Drawing.Point(0, 160);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(335, 57);
+            this.panel11.TabIndex = 10;
+            // 
+            // deleteUser_btn
+            // 
+            this.deleteUser_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.deleteUser_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.deleteUser_btn.FlatAppearance.BorderSize = 0;
+            this.deleteUser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteUser_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteUser_btn.ForeColor = System.Drawing.Color.White;
+            this.deleteUser_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteUser_btn.Location = new System.Drawing.Point(0, 0);
+            this.deleteUser_btn.Name = "deleteUser_btn";
+            this.deleteUser_btn.Size = new System.Drawing.Size(335, 48);
+            this.deleteUser_btn.TabIndex = 8;
+            this.deleteUser_btn.Text = "                Delete User";
+            this.deleteUser_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteUser_btn.UseVisualStyleBackColor = false;
             // 
             // AdminDashboard
             // 
@@ -342,10 +292,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 719);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
@@ -360,10 +306,8 @@
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -373,25 +317,21 @@
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox menuButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label menuLabel;
         private System.Windows.Forms.Timer sidebarTimer;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button dashboard_btn;
         private System.Windows.Forms.Panel userContainer;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button userButton;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button createUser_btn;
         private System.Windows.Forms.Timer userTimer;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button editUser_btn;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button usersCatalog_btn;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button deleteUser_btn;
     }
 }

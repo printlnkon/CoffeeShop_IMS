@@ -56,7 +56,7 @@ namespace CoffeeShop_IMS
             else
             {
                 userContainer.Height -= 10;
-                if (userContainer.Height == userContainer.MaximumSize.Height)
+                if (userContainer.Height == userContainer.MinimumSize.Height)
                 {
                     userCollapse = true;
                     userTimer.Stop();
@@ -65,7 +65,7 @@ namespace CoffeeShop_IMS
         }
         private void userButton_Click(object sender, EventArgs e)
         {
-
+            userTimer.Start();
         }
     }
 }
