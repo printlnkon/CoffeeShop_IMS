@@ -81,9 +81,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CoffeeShop_IMS.Properties.Resources.coffee_cup;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(188, 157);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -97,7 +97,7 @@
             this.logIn_btn.Location = new System.Drawing.Point(300, 242);
             this.logIn_btn.Name = "logIn_btn";
             this.logIn_btn.Size = new System.Drawing.Size(275, 37);
-            this.logIn_btn.TabIndex = 17;
+            this.logIn_btn.TabIndex = 3;
             this.logIn_btn.Text = "Log In";
             this.logIn_btn.UseVisualStyleBackColor = false;
             this.logIn_btn.Click += new System.EventHandler(this.logIn_btn_Click);
@@ -109,7 +109,7 @@
             this.showPass.Location = new System.Drawing.Point(554, 208);
             this.showPass.Name = "showPass";
             this.showPass.Size = new System.Drawing.Size(15, 14);
-            this.showPass.TabIndex = 16;
+            this.showPass.TabIndex = 2;
             this.showPass.UseVisualStyleBackColor = true;
             this.showPass.CheckedChanged += new System.EventHandler(this.login_showPass_CheckedChanged);
             // 
@@ -130,7 +130,7 @@
             this.loginUsername.Multiline = true;
             this.loginUsername.Name = "loginUsername";
             this.loginUsername.Size = new System.Drawing.Size(275, 26);
-            this.loginUsername.TabIndex = 20;
+            this.loginUsername.TabIndex = 0;
             // 
             // label3
             // 
@@ -160,7 +160,7 @@
             this.loginPassword.Name = "loginPassword";
             this.loginPassword.PasswordChar = '*';
             this.loginPassword.Size = new System.Drawing.Size(275, 26);
-            this.loginPassword.TabIndex = 19;
+            this.loginPassword.TabIndex = 1;
             // 
             // createAcc_btn
             // 
@@ -171,7 +171,7 @@
             this.createAcc_btn.Location = new System.Drawing.Point(300, 296);
             this.createAcc_btn.Name = "createAcc_btn";
             this.createAcc_btn.Size = new System.Drawing.Size(275, 37);
-            this.createAcc_btn.TabIndex = 21;
+            this.createAcc_btn.TabIndex = 4;
             this.createAcc_btn.Text = "Register Account";
             this.createAcc_btn.UseVisualStyleBackColor = false;
             this.createAcc_btn.Click += new System.EventHandler(this.createAcc_btn_Click);
@@ -193,7 +193,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "LoginForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

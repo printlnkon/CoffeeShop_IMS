@@ -11,6 +11,7 @@ namespace CoffeeShop_IMS
         public RegisterForm()
         {
             InitializeComponent();
+            FormStylingCorners.ApplyRoundedCorners(this, 20, 20); // apply rounded corners
         }
 
         private void alreadyRegistered_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

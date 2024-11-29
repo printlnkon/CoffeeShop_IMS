@@ -12,6 +12,7 @@ namespace CoffeeShop_IMS
         public LoginForm()
         {
             InitializeComponent();
+            FormStylingCorners.ApplyRoundedCorners(this, 20, 20); // apply rounded corners
         }
         private void logIn_btn_Click(object sender, EventArgs e)
         {
