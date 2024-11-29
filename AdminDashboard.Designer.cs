@@ -87,23 +87,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.helloGreeting = new System.Windows.Forms.Label();
             this.editUserPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.updateAccount = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.editcontactNo_txtBox = new System.Windows.Forms.TextBox();
+            this.edituserName_txtBox = new System.Windows.Forms.TextBox();
+            this.editID_txtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.edituserType_comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.menuContainer.SuspendLayout();
@@ -128,6 +121,7 @@
             this.greetingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.editUserPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -802,7 +796,6 @@
             this.greetingPanel.Name = "greetingPanel";
             this.greetingPanel.Size = new System.Drawing.Size(115, 130);
             this.greetingPanel.TabIndex = 71;
-            this.greetingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.greetingPanel_Paint);
             // 
             // pictureBox1
             // 
@@ -829,23 +822,16 @@
             // 
             // editUserPanel
             // 
-            this.editUserPanel.Controls.Add(this.button1);
-            this.editUserPanel.Controls.Add(this.checkBox1);
+            this.editUserPanel.Controls.Add(this.dataGridView);
             this.editUserPanel.Controls.Add(this.updateAccount);
-            this.editUserPanel.Controls.Add(this.textBox1);
-            this.editUserPanel.Controls.Add(this.textBox2);
-            this.editUserPanel.Controls.Add(this.textBox3);
-            this.editUserPanel.Controls.Add(this.textBox4);
-            this.editUserPanel.Controls.Add(this.textBox5);
-            this.editUserPanel.Controls.Add(this.textBox6);
+            this.editUserPanel.Controls.Add(this.editcontactNo_txtBox);
+            this.editUserPanel.Controls.Add(this.edituserName_txtBox);
+            this.editUserPanel.Controls.Add(this.editID_txtbox);
             this.editUserPanel.Controls.Add(this.label1);
-            this.editUserPanel.Controls.Add(this.comboBox1);
+            this.editUserPanel.Controls.Add(this.edituserType_comboBox);
             this.editUserPanel.Controls.Add(this.label2);
-            this.editUserPanel.Controls.Add(this.label3);
-            this.editUserPanel.Controls.Add(this.label6);
             this.editUserPanel.Controls.Add(this.label9);
             this.editUserPanel.Controls.Add(this.label10);
-            this.editUserPanel.Controls.Add(this.label11);
             this.editUserPanel.Controls.Add(this.label12);
             this.editUserPanel.Location = new System.Drawing.Point(280, 168);
             this.editUserPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -853,32 +839,15 @@
             this.editUserPanel.Size = new System.Drawing.Size(951, 547);
             this.editUserPanel.TabIndex = 69;
             // 
-            // button1
+            // dataGridView
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Tan;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(38, 466);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 35);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(821, 305);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 32;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.Tan;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(38, 85);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(554, 409);
+            this.dataGridView.TabIndex = 34;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // updateAccount
             // 
@@ -888,72 +857,46 @@
             this.updateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateAccount.ForeColor = System.Drawing.Color.White;
-            this.updateAccount.Location = new System.Drawing.Point(257, 466);
+            this.updateAccount.Location = new System.Drawing.Point(615, 458);
             this.updateAccount.Name = "updateAccount";
-            this.updateAccount.Size = new System.Drawing.Size(190, 35);
+            this.updateAccount.Size = new System.Drawing.Size(275, 36);
             this.updateAccount.TabIndex = 31;
             this.updateAccount.Text = "Update Account";
             this.updateAccount.UseVisualStyleBackColor = false;
+            this.updateAccount.Click += new System.EventHandler(this.updateAccount_Click);
             // 
-            // textBox1
+            // editcontactNo_txtBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.editcontactNo_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(569, 385);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(275, 24);
-            this.textBox1.TabIndex = 5;
+            this.editcontactNo_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editcontactNo_txtBox.Location = new System.Drawing.Point(615, 314);
+            this.editcontactNo_txtBox.Multiline = true;
+            this.editcontactNo_txtBox.Name = "editcontactNo_txtBox";
+            this.editcontactNo_txtBox.Size = new System.Drawing.Size(275, 26);
+            this.editcontactNo_txtBox.TabIndex = 3;
             // 
-            // textBox2
+            // edituserName_txtBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.edituserName_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(569, 298);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(275, 24);
-            this.textBox2.TabIndex = 4;
+            this.edituserName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edituserName_txtBox.Location = new System.Drawing.Point(615, 221);
+            this.edituserName_txtBox.Multiline = true;
+            this.edituserName_txtBox.Name = "edituserName_txtBox";
+            this.edituserName_txtBox.Size = new System.Drawing.Size(275, 26);
+            this.edituserName_txtBox.TabIndex = 2;
             // 
-            // textBox3
+            // editID_txtbox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(74, 414);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 26);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(74, 234);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(275, 26);
-            this.textBox4.TabIndex = 1;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(74, 324);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(275, 26);
-            this.textBox5.TabIndex = 2;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(74, 144);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(275, 26);
-            this.textBox6.TabIndex = 0;
+            this.editID_txtbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editID_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editID_txtbox.Location = new System.Drawing.Point(615, 128);
+            this.editID_txtbox.Multiline = true;
+            this.editID_txtbox.Name = "editID_txtbox";
+            this.editID_txtbox.Size = new System.Drawing.Size(275, 26);
+            this.editID_txtbox.TabIndex = 0;
             // 
             // label1
             // 
@@ -966,110 +909,76 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Edit User Account";
             // 
-            // comboBox1
+            // edituserType_comboBox
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.edituserType_comboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.edituserType_comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edituserType_comboBox.FormattingEnabled = true;
+            this.edituserType_comboBox.Items.AddRange(new object[] {
             "Manager",
             "User"});
-            this.comboBox1.Location = new System.Drawing.Point(569, 475);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(275, 28);
-            this.comboBox1.TabIndex = 6;
+            this.edituserType_comboBox.Location = new System.Drawing.Point(615, 407);
+            this.edituserType_comboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.edituserType_comboBox.Name = "edituserType_comboBox";
+            this.edituserType_comboBox.Size = new System.Drawing.Size(275, 28);
+            this.edituserType_comboBox.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(569, 439);
+            this.label2.Location = new System.Drawing.Point(615, 363);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 24);
+            this.label2.Size = new System.Drawing.Size(87, 21);
             this.label2.TabIndex = 18;
             this.label2.Text = "User Type:";
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Sienna;
-            this.label3.Location = new System.Drawing.Point(569, 344);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 24);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Confirm Password : ";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Sienna;
-            this.label6.Location = new System.Drawing.Point(569, 252);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 24);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Password : ";
-            // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Sienna;
-            this.label9.Location = new System.Drawing.Point(74, 370);
+            this.label9.Location = new System.Drawing.Point(615, 270);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 24);
+            this.label9.Size = new System.Drawing.Size(112, 21);
             this.label9.TabIndex = 11;
             this.label9.Text = "Contact No.:";
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Sienna;
-            this.label10.Location = new System.Drawing.Point(74, 280);
+            this.label10.Location = new System.Drawing.Point(615, 177);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 24);
+            this.label10.Size = new System.Drawing.Size(96, 21);
             this.label10.TabIndex = 9;
             this.label10.Text = "Username: ";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Sienna;
-            this.label11.Location = new System.Drawing.Point(74, 190);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 24);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Last Name: ";
-            // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Sienna;
-            this.label12.Location = new System.Drawing.Point(74, 100);
+            this.label12.Location = new System.Drawing.Point(615, 84);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 24);
+            this.label12.Size = new System.Drawing.Size(35, 21);
             this.label12.TabIndex = 5;
-            this.label12.Text = "First Name:";
+            this.label12.Text = "I.D:";
             // 
             // AdminDashboard
             // 
@@ -1077,10 +986,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1219, 698);
-            this.Controls.Add(this.editUserPanel);
             this.Controls.Add(this.greetingPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidebar);
+            this.Controls.Add(this.editUserPanel);
             this.Controls.Add(this.dashboardPanel);
             this.Controls.Add(this.createUserPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1120,6 +1029,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.editUserPanel.ResumeLayout(false);
             this.editUserPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1183,23 +1093,16 @@
         private System.Windows.Forms.Label helloGreeting;
         private System.Windows.Forms.Button clear_btn;
         private System.Windows.Forms.Panel editUserPanel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button updateAccount;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox editcontactNo_txtBox;
+        private System.Windows.Forms.TextBox edituserName_txtBox;
+        private System.Windows.Forms.TextBox editID_txtbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox edituserType_comboBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
