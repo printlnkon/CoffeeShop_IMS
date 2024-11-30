@@ -15,13 +15,11 @@ namespace CoffeeShop_IMS
         {
             InitializeComponent();
             FormStylingCorners.ApplyRoundedCorners(this, 20, 20); // apply rounded corners
-            this.DoubleBuffered = true; // prevent flickering animation 
+            this.DoubleBuffered = true; // prevent flickering animation
+            
+            LoadUserData();
         }
 
-        private void AdminDashboard_Load(object sender, EventArgs e)
-        {
-            UpdateGridView();
-        }
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
             if (menuExpand)
@@ -227,146 +225,126 @@ namespace CoffeeShop_IMS
             editUserPanel.BringToFront();
         }
 
-        void UpdateGridView()
+        void LoadUserData() 
         {
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;"))
                 {
-                    conn.Open();
-
-                    string query = "SELECT id, firstName, lastName, userName, contactNo, userType FROM users";
+                    string query = "SELECT id, firstName, lastName, userName, contactNo, userType FROM users"; // Modify the query based on your table structure
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-
-                    // Clear existing columns
-                    //dataGridView.Columns.Clear();
-
-                    // Set AutoGenerateColumns to false
-                    //dataGridView.AutoGenerateColumns = false;
-
-                    // Add columns manually
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "id",
-                        HeaderText = "ID",
-                        Name = "id",
-                        ReadOnly = true,
-                        Width = 50
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "firstName",
-                        HeaderText = "First Name",
-                        Name = "firstName"
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "lastName",
-                        HeaderText = "Last Name",
-                        Name = "lastName"
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "userName",
-                        HeaderText = "Username",
-                        Name = "userName"
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "contactNo",
-                        HeaderText = "Contact Number",
-                        Name = "contactNo"
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "userType",
-                        HeaderText = "User Type",
-                        Name = "userType"
-                    });
-
                     dataGridView.DataSource = dt;
-                    dataGridView.Refresh();
                 }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show($"Error connecting to the database: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            dataGridView.AutoGenerateColumns = true;
+
+            // set header columns
+            // ID Column
+            //dataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            //{
+            //    DataPropertyName = "id",
+            //    HeaderText = "ID",
+            //    ReadOnly = true
+            //});
+
+            //// First Name Column
+            //dataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            //{
+            //    DataPropertyName = "firstName",
+            //    HeaderText = "First Name"
+            //});
+
+            //// Last Name Column
+            //dataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            //{
+            //    DataPropertyName = "lastName",
+            //    HeaderText = "Last Name"
+            //});
+
+            //// UserName Column
+            //dataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            //{
+            //    DataPropertyName = "userName",
+            //    HeaderText = "Username"
+            //});
+
+            //// ContactNo Column
+            //dataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            //{
+            //    DataPropertyName = "contactNo",
+            //    HeaderText = "Contact Number"
+            //});
+
+            //// UserType Column
+            //dataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            //{
+            //    DataPropertyName = "userType",
+            //    HeaderText = "User Type"
+            //});
+
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView.Rows.Count)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView.Rows[e.RowIndex];
-                editID_txtbox.Text = row.Cells[0].Value.ToString();
-                editfirstName_txtBox.Text = row.Cells[1].Value.ToString();
-                editlastName_txtBox.Text = row.Cells[2].Value.ToString();
-                edituserName_txtBox.Text = row.Cells[3].Value.ToString();
-                editcontactNo_txtBox.Text = row.Cells[4].Value.ToString();
-                edituserType_comboBox.Text = row.Cells[5].Value.ToString();
+
+                // Populate fields with selected row data
+                editID_txtbox.Text = row.Cells["id"].Value.ToString(); // Adjust column names if needed
+                edituserName_txtBox.Text = row.Cells["userName"].Value.ToString();
+                editcontactNo_txtBox.Text = row.Cells["contactNo"].Value.ToString();
+                edituserType_comboBox.Text = row.Cells["userType"].Value.ToString();
 
                 // Make ID textbox read-only
                 editID_txtbox.ReadOnly = true;
             }
         }
 
+
         private void updateAccount_Click(object sender, EventArgs e)
         {
-            if (editfirstName_txtBox.Text != "" && editlastName_txtBox.Text != "" && editID_txtbox.Text != "" && edituserName_txtBox.Text != "" && editcontactNo_txtBox.Text != "" && edituserType_comboBox.Text != "")
+            try
             {
-                try
+                using (MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;"))
                 {
-                    using (MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;"))
-                    {
-                        string query = "UPDATE users SET firstName = @firstName, lastName = @lastName, userName = @userName, contactNo = @contactNo, userType = @userType WHERE id = @id";
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                    string query = "UPDATE users SET userName = @userName, contactNo = @contactNo, userType = @userType WHERE id = @id";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                        // parameters to avoid sql injection
-                        cmd.Parameters.AddWithValue("@id", editID_txtbox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@firstName", editfirstName_txtBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@lastName", editlastName_txtBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@userName", edituserName_txtBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@contactNo", editcontactNo_txtBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@userType", edituserType_comboBox.Text.Trim());
+                    // parameters to avoid sql injection
+                    cmd.Parameters.AddWithValue("@id", editID_txtbox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@userName", edituserName_txtBox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@contactNo", editcontactNo_txtBox.Text.Trim());
+                    cmd.Parameters.AddWithValue("@userType", edituserType_comboBox.Text.Trim());
 
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
 
-                        MessageBox.Show("Account updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // automatically clear textboxes and combobox
-                        editID_txtbox.Enabled = false;
-                        editID_txtbox.Clear();
-                        editfirstName_txtBox.Clear();
-                        editlastName_txtBox.Clear();
-                        edituserName_txtBox.Clear();
-                        editcontactNo_txtBox.Clear();
-                        edituserType_comboBox.SelectedIndex = -1;
-                        UpdateGridView();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error updating account: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Account updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    // automatically clear textboxes and combobox
+                    editID_txtbox.Clear();
+                    edituserName_txtBox.Clear();
+                    editcontactNo_txtBox.Clear();
+                    edituserType_comboBox.SelectedIndex = -1;
+                    LoadUserData();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select an account to update. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error updating account: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }
