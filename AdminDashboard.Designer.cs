@@ -73,6 +73,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.helloGreeting = new System.Windows.Forms.Label();
             this.editUserPanel = new System.Windows.Forms.Panel();
+            this.editlastName_txtBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.editfirstName_txtBox = new System.Windows.Forms.TextBox();
+            this.firstName = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.updateAccount = new System.Windows.Forms.Button();
             this.editcontactNo_txtBox = new System.Windows.Forms.TextBox();
@@ -84,23 +88,19 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.editfirstName_txtBox = new System.Windows.Forms.TextBox();
-            this.firstName = new System.Windows.Forms.Label();
-            this.editlastName_txtBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.adminDashboard_label = new System.Windows.Forms.Label();
             this.checkUserPanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.checkManagerPanel = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.checkItemsPanel = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.checkOrdersPanel = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dashboardPanel = new System.Windows.Forms.Panel();
             this.sidebar.SuspendLayout();
             this.menuContainer.SuspendLayout();
@@ -679,6 +679,56 @@
             this.editUserPanel.Size = new System.Drawing.Size(1102, 645);
             this.editUserPanel.TabIndex = 69;
             // 
+            // editlastName_txtBox
+            // 
+            this.editlastName_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editlastName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editlastName_txtBox.Location = new System.Drawing.Point(765, 235);
+            this.editlastName_txtBox.Multiline = true;
+            this.editlastName_txtBox.Name = "editlastName_txtBox";
+            this.editlastName_txtBox.Size = new System.Drawing.Size(275, 26);
+            this.editlastName_txtBox.TabIndex = 35;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Sienna;
+            this.label3.Location = new System.Drawing.Point(566, 231);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 33);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Last Name:";
+            // 
+            // editfirstName_txtBox
+            // 
+            this.editfirstName_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editfirstName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editfirstName_txtBox.Location = new System.Drawing.Point(765, 157);
+            this.editfirstName_txtBox.Multiline = true;
+            this.editfirstName_txtBox.Name = "editfirstName_txtBox";
+            this.editfirstName_txtBox.Size = new System.Drawing.Size(275, 26);
+            this.editfirstName_txtBox.TabIndex = 33;
+            // 
+            // firstName
+            // 
+            this.firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.firstName.AutoSize = true;
+            this.firstName.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstName.ForeColor = System.Drawing.Color.Sienna;
+            this.firstName.Location = new System.Drawing.Point(566, 152);
+            this.firstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(158, 33);
+            this.firstName.TabIndex = 34;
+            this.firstName.Text = "First Name:";
+            // 
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
@@ -824,56 +874,6 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "I.D:";
             // 
-            // editfirstName_txtBox
-            // 
-            this.editfirstName_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.editfirstName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editfirstName_txtBox.Location = new System.Drawing.Point(765, 157);
-            this.editfirstName_txtBox.Multiline = true;
-            this.editfirstName_txtBox.Name = "editfirstName_txtBox";
-            this.editfirstName_txtBox.Size = new System.Drawing.Size(275, 26);
-            this.editfirstName_txtBox.TabIndex = 33;
-            // 
-            // firstName
-            // 
-            this.firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.firstName.AutoSize = true;
-            this.firstName.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstName.ForeColor = System.Drawing.Color.Sienna;
-            this.firstName.Location = new System.Drawing.Point(566, 152);
-            this.firstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(158, 33);
-            this.firstName.TabIndex = 34;
-            this.firstName.Text = "First Name:";
-            // 
-            // editlastName_txtBox
-            // 
-            this.editlastName_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.editlastName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editlastName_txtBox.Location = new System.Drawing.Point(765, 235);
-            this.editlastName_txtBox.Multiline = true;
-            this.editlastName_txtBox.Name = "editlastName_txtBox";
-            this.editlastName_txtBox.Size = new System.Drawing.Size(275, 26);
-            this.editlastName_txtBox.TabIndex = 35;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Sienna;
-            this.label3.Location = new System.Drawing.Point(566, 231);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 33);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Last Name:";
-            // 
             // adminDashboard_label
             // 
             this.adminDashboard_label.AutoSize = true;
@@ -896,17 +896,6 @@
             this.checkUserPanel.Size = new System.Drawing.Size(181, 221);
             this.checkUserPanel.TabIndex = 67;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -919,6 +908,17 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Check User Activity";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // checkManagerPanel
             // 
             this.checkManagerPanel.BackColor = System.Drawing.Color.Tan;
@@ -929,17 +929,6 @@
             this.checkManagerPanel.Name = "checkManagerPanel";
             this.checkManagerPanel.Size = new System.Drawing.Size(181, 221);
             this.checkManagerPanel.TabIndex = 67;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -953,6 +942,17 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Check Manager Activity";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // checkItemsPanel
             // 
             this.checkItemsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -965,19 +965,6 @@
             this.checkItemsPanel.Name = "checkItemsPanel";
             this.checkItemsPanel.Size = new System.Drawing.Size(181, 221);
             this.checkItemsPanel.TabIndex = 67;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
             // 
             // label8
             // 
@@ -993,6 +980,19 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Check Items";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
             // checkOrdersPanel
             // 
             this.checkOrdersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1005,19 +1005,6 @@
             this.checkOrdersPanel.Name = "checkOrdersPanel";
             this.checkOrdersPanel.Size = new System.Drawing.Size(181, 221);
             this.checkOrdersPanel.TabIndex = 67;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // label7
             // 
@@ -1032,6 +1019,19 @@
             this.label7.Size = new System.Drawing.Size(97, 16);
             this.label7.TabIndex = 3;
             this.label7.Text = "Check Orders";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // dashboardPanel
             // 
@@ -1058,9 +1058,9 @@
             this.Controls.Add(this.greetingPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidebar);
+            this.Controls.Add(this.editUserPanel);
             this.Controls.Add(this.dashboardPanel);
             this.Controls.Add(this.createUserPanel);
-            this.Controls.Add(this.editUserPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
