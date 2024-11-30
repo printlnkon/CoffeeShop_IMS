@@ -50,7 +50,6 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.userTimer = new System.Windows.Forms.Timer(this.components);
             this.createUserPanel = new System.Windows.Forms.Panel();
-            this.clear_btn = new System.Windows.Forms.Button();
             this.showPass = new System.Windows.Forms.CheckBox();
             this.createUserAccount_btn = new System.Windows.Forms.Button();
             this.confirmPassword_txtBox = new System.Windows.Forms.TextBox();
@@ -362,7 +361,6 @@
             this.createUserPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.createUserPanel.Controls.Add(this.clear_btn);
             this.createUserPanel.Controls.Add(this.showPass);
             this.createUserPanel.Controls.Add(this.createUserAccount_btn);
             this.createUserPanel.Controls.Add(this.confirmPassword_txtBox);
@@ -387,22 +385,6 @@
             this.createUserPanel.Name = "createUserPanel";
             this.createUserPanel.Size = new System.Drawing.Size(1098, 647);
             this.createUserPanel.TabIndex = 68;
-            // 
-            // clear_btn
-            // 
-            this.clear_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.clear_btn.BackColor = System.Drawing.Color.Tan;
-            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_btn.ForeColor = System.Drawing.Color.White;
-            this.clear_btn.Location = new System.Drawing.Point(658, 31);
-            this.clear_btn.Name = "clear_btn";
-            this.clear_btn.Size = new System.Drawing.Size(190, 36);
-            this.clear_btn.TabIndex = 33;
-            this.clear_btn.Text = "Clear";
-            this.clear_btn.UseVisualStyleBackColor = false;
-            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
             // 
             // showPass
             // 
@@ -1058,9 +1040,9 @@
             this.Controls.Add(this.greetingPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidebar);
+            this.Controls.Add(this.createUserPanel);
             this.Controls.Add(this.editUserPanel);
             this.Controls.Add(this.dashboardPanel);
-            this.Controls.Add(this.createUserPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
@@ -1147,7 +1129,6 @@
         private System.Windows.Forms.Panel greetingPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label helloGreeting;
-        private System.Windows.Forms.Button clear_btn;
         private System.Windows.Forms.Panel editUserPanel;
         private System.Windows.Forms.Button updateAccount;
         private System.Windows.Forms.TextBox editcontactNo_txtBox;

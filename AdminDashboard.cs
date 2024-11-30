@@ -164,6 +164,15 @@ namespace CoffeeShop_IMS
                             conn.Close();
 
                             MessageBox.Show($"New {userType} account has been created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            firstName_txtBox.Clear();
+                            lastName_txtBox.Clear();
+                            userName_txtBox.Clear();
+                            contactNo_txtBox.Clear();
+                            createPassword_txtBox.Clear();
+                            confirmPassword_txtBox.Clear();
+                            userType_comboBox.SelectedIndex = -1;
+                            firstName_txtBox.Focus();
                         }
                         catch (MySqlException)
                         {
@@ -201,24 +210,6 @@ namespace CoffeeShop_IMS
                 hash.Append(bytes[i].ToString("x2"));
             }
             return hash.ToString();
-        }
-
-        private void clear_btn_Click(object sender, EventArgs e)
-        {
-            firstName_txtBox.Text = string.Empty;
-            lastName_txtBox.Text = string.Empty;
-            userName_txtBox.Text = string.Empty;
-            contactNo_txtBox.Text = string.Empty;
-            createPassword_txtBox.Text = string.Empty;
-            confirmPassword_txtBox.Text = string.Empty;
-
-            // reset the combo box to default state
-            userType_comboBox.SelectedIndex = -1;
-
-            // set focus back to the first field
-            firstName_txtBox.Focus();
-
-            MessageBox.Show("All fields have been cleared.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //---------- edit user function ----------//
