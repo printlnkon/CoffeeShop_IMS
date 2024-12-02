@@ -1,13 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace CoffeeShop_IMS
@@ -26,6 +23,56 @@ namespace CoffeeShop_IMS
             FillEditGridView();
             FillDeleteGridView();
         }
+
+        private string GetAdminUsername()
+        {
+            string username = string.Empty;
+
+            try
+            {
+                // Set up database connection (use your actual connection string)
+                using (MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;"))
+                {
+                    string query = "SELECT `userType` FROM `users` WHERE `userType` = 'Admin' LIMIT 1"; // Example query to get admin username
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                    conn.Open();
+                    username = cmd.ExecuteScalar()?.ToString();  // Execute the query and get the result
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error fetching username: " + ex.Message);
+            }
+
+            return username;
+        }
+
+        private void GreetingPanel_Paint(object sender, PaintEventArgs e)
+        {
+            // Get the admin username from the database
+            string adminUsername = GetAdminUsername();
+
+            // Set the text of the label directly
+            if (!string.IsNullOrEmpty(adminUsername))
+            {
+                helloGreeting.Text = "Hello, " + adminUsername + "!"; // Update the text of the label
+            }
+            else
+            {
+                helloGreeting.Text = "Hello, User" + "!"; // Default greeting if username is empty or null
+            }
+        }
+
+        private void Logout_btn_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            MessageBox.Show("Logout successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoginForm lf = new LoginForm();
+            lf.ShowDialog();
+        }
+
         private void createUser_btn_Click(object sender, EventArgs e)
         {
             createUserPanel.BringToFront();
@@ -130,6 +177,17 @@ namespace CoffeeShop_IMS
                 editUserPanel.Width = this.Width - sidebar.MinimumSize.Width;
             }
 
+            if (menuExpand)
+            {
+                deleteUserPanel.Left = sidebar.Width;
+                deleteUserPanel.Width = this.Width - sidebar.Width;
+            }
+            else
+            {
+                deleteUserPanel.Left = sidebar.MinimumSize.Width;
+                deleteUserPanel.Width = this.Width - sidebar.MinimumSize.Width;
+            }
+
         }
         private void UserManagement_btn_Click(object sender, EventArgs e)
         {
@@ -144,13 +202,41 @@ namespace CoffeeShop_IMS
         // ---------- start of create user function ---------- //
         private void CreateAccount_Click(object sender, EventArgs e)
         {
+            // Regular expressions for validation
+            Regex nameRegex = new Regex("^[a-zA-Z]+$"); // Only letters allowed
+            Regex contactRegex = new Regex("^[0-9]{11}$"); // Exactly 11 digits
+            Regex passwordRegex = new Regex(@"^[a-zA-Z0-9!@#$%^&*(),.?{}|<>]+$"); // Allow letters, numbers, and special characters
+
+            // Check if any field is empty
             if (firstName_txtBox.Text != "" && lastName_txtBox.Text != "" && userName_txtBox.Text != "" && contactNo_txtBox.Text != "" && createPassword_txtBox.Text != "" && confirmPassword_txtBox.Text != "" && userType_comboBox.Text != "")
             {
+                // Validate first name, last name, and username (must not contain numbers)
+                if (!nameRegex.IsMatch(firstName_txtBox.Text) || !nameRegex.IsMatch(lastName_txtBox.Text))
+                {
+                    MessageBox.Show("First name, last name, and username must not contain numbers.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Validate contact number (must be 11 digits and only numbers)
+                if (!contactRegex.IsMatch(contactNo_txtBox.Text))
+                {
+                    MessageBox.Show("Contact number must be exactly 11 digits and contain only numbers.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Validate password match
                 if (createPassword_txtBox.Text == confirmPassword_txtBox.Text)
                 {
+                    // Validate password (allow letters, numbers, and special characters)
+                    if (!passwordRegex.IsMatch(createPassword_txtBox.Text))
+                    {
+                        MessageBox.Show("Password contains invalid characters.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     string userType = userType_comboBox.Text.Trim();
 
-                    if (userType == "User" || userType == "Manager")
+                    if (userType == "User" || userType == "Manager" || userType == "Admin")
                     {
                         try
                         {
@@ -163,14 +249,14 @@ namespace CoffeeShop_IMS
                             cmd.Parameters.AddWithValue("@lastName", lastName_txtBox.Text.Trim());
                             cmd.Parameters.AddWithValue("@userName", userName_txtBox.Text.Trim());
                             cmd.Parameters.AddWithValue("@contactNo", contactNo_txtBox.Text.Trim());
-                            cmd.Parameters.AddWithValue("@password", MD5Hash(createPassword_txtBox.Text.Trim()));
+                            cmd.Parameters.AddWithValue("@password", MD5Hash(createPassword_txtBox.Text.Trim())); // Hash password
                             cmd.Parameters.AddWithValue("@userType", userType);
 
                             conn.Open();
                             cmd.ExecuteNonQuery();
                             conn.Close();
 
-                            MessageBox.Show($"New {userType} account has been created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"New {userType} account has been created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             firstName_txtBox.Clear();
                             lastName_txtBox.Clear();
@@ -208,6 +294,7 @@ namespace CoffeeShop_IMS
                 MessageBox.Show("Please fill out all fields.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
         }
+
         private void ShowPass_CheckedChanged(object sender, EventArgs e)
         {
             createPassword_txtBox.PasswordChar = showPass.Checked ? '\0' : '*';
@@ -229,8 +316,35 @@ namespace CoffeeShop_IMS
         // ---------- start of edit user function ---------- //
         private void EditAccount_Click(object sender, EventArgs e)
         {
+            // Regular expressions for validation
+            Regex nameRegex = new Regex("^[a-zA-Z]+$"); // Only letters allowed for firstName, lastName, and userName
+            Regex contactRegex = new Regex("^[0-9]{11}$"); // Exactly 11 digits for contactNo
+            Regex userTypeRegex = new Regex("^(User|Manager|Admin)$"); // Only "User", "Manager", or "Admin" for userType
+
+            // Check if any field is empty
             if (editfirstName.Text != "" && editlastName.Text != "" && editId.Text != "" && edituserName.Text != "" && editcontactNo.Text != "" && edituserType.Text != "")
             {
+                // Validate first name, last name, and username (must not contain numbers)
+                if (!nameRegex.IsMatch(editfirstName.Text) || !nameRegex.IsMatch(editlastName.Text) || !nameRegex.IsMatch(edituserName.Text))
+                {
+                    MessageBox.Show("First name, last name, and username must not contain numbers.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Validate contact number (must be 11 digits and only numbers)
+                if (!contactRegex.IsMatch(editcontactNo.Text))
+                {
+                    MessageBox.Show("Contact number must be exactly 11 digits and contain only numbers.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Validate user type (must be "User" or "Manager")
+                if (!userTypeRegex.IsMatch(edituserType.Text))
+                {
+                    MessageBox.Show("Invalid user type selected. It must be either 'User' or 'Manager'.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    return;
+                }
+
                 try
                 {
                     MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;");
@@ -238,7 +352,7 @@ namespace CoffeeShop_IMS
                     string query = "UPDATE users SET firstName = @firstName, lastName = @lastName, userName = @userName, contactNo = @contactNo, userType = @userType WHERE id = @id";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                    // parameters to avoid sql injection
+                    // parameters to avoid SQL injection
                     cmd.Parameters.AddWithValue("@id", editId.Text.Trim());
                     cmd.Parameters.AddWithValue("@firstName", editfirstName.Text.Trim());
                     cmd.Parameters.AddWithValue("@lastName", editlastName.Text.Trim());
@@ -250,9 +364,9 @@ namespace CoffeeShop_IMS
                     cmd.ExecuteNonQuery();
                     conn.Close();
 
-                    MessageBox.Show("Account updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Account updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // automatically clear textboxes and combobox
+                    // Automatically clear textboxes and combobox
                     editId.Enabled = false;
                     editId.Clear();
                     editfirstName.Clear();
@@ -271,9 +385,10 @@ namespace CoffeeShop_IMS
             }
             else
             {
-                MessageBox.Show("Please select an account to update. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select an account to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void FillEditGridView()
         {
             try
@@ -302,6 +417,7 @@ namespace CoffeeShop_IMS
 
                     // Optional: Set auto-generate columns if needed
                     editDataGridView.AutoGenerateColumns = true;
+                    editDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
                 }
             }
             catch (MySqlException ex)
@@ -345,9 +461,9 @@ namespace CoffeeShop_IMS
         }
         // ---------- end of edit user function ---------- //
 
-        // ---------- start of delete user function ---------- //
 
-        private void deleteAccount_Click(object sender, EventArgs e)
+        // ---------- start of delete user function ---------- //
+        private void DeleteAccount_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to delete this account?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
@@ -424,6 +540,8 @@ namespace CoffeeShop_IMS
 
                     // Optional: Set auto-generate columns if needed
                     deletedataGridView.AutoGenerateColumns = true;
+                    deletedataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
                 }
             }
             catch (MySqlException ex)
@@ -437,8 +555,7 @@ namespace CoffeeShop_IMS
                 MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void deletedataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DeletedataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -456,8 +573,7 @@ namespace CoffeeShop_IMS
                     deletecontactNo.Text = row.Cells["contactNo"]?.Value?.ToString()?.Trim() ?? string.Empty;
                     deleteuserType.Text = row.Cells["userType"]?.Value?.ToString()?.Trim() ?? string.Empty;
 
-                    // Optionally, make the ID textbox read-only to prevent accidental changes
-                    editId.ReadOnly = true;
+                    deleteId.ReadOnly = true;
                 }
                 else
                 {
@@ -480,8 +596,10 @@ namespace CoffeeShop_IMS
             ul.ShowDialog();
             this.Hide();
         }
+
+        
+
+
         // ---------- end of user lists function ---------- //
-
-
     }
 }

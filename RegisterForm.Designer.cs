@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Register_btn = new System.Windows.Forms.Button();
             this.alreadyRegistered = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.contactNo = new System.Windows.Forms.TextBox();
             this.uName = new System.Windows.Forms.TextBox();
             this.lName = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.showPass = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,9 +55,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -67,24 +67,34 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(24, 257);
+            this.label7.Location = new System.Drawing.Point(33, 363);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(211, 66);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "CFMS:\r\nCoffee Shop Inventory\r\nManagement System\r\n";
+            this.label7.Size = new System.Drawing.Size(207, 66);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "CSMS:\r\nCoffee Shop\r\nManagement System\r\n";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 211);
+            this.label1.Location = new System.Drawing.Point(29, 327);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 32);
-            this.label1.TabIndex = 11;
+            this.label1.Size = new System.Drawing.Size(170, 32);
+            this.label1.TabIndex = 14;
             this.label1.Text = "Welcome to";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CoffeeShop_IMS.Properties.Resources.coffee_cup;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 139);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(205, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // Register_btn
             // 
@@ -95,7 +105,7 @@
             this.Register_btn.Location = new System.Drawing.Point(303, 477);
             this.Register_btn.Name = "Register_btn";
             this.Register_btn.Size = new System.Drawing.Size(275, 37);
-            this.Register_btn.TabIndex = 6;
+            this.Register_btn.TabIndex = 7;
             this.Register_btn.Text = "Register Account";
             this.Register_btn.UseVisualStyleBackColor = false;
             this.Register_btn.Click += new System.EventHandler(this.Register_btn_Click);
@@ -107,10 +117,10 @@
             this.alreadyRegistered.Location = new System.Drawing.Point(365, 531);
             this.alreadyRegistered.Name = "alreadyRegistered";
             this.alreadyRegistered.Size = new System.Drawing.Size(146, 15);
-            this.alreadyRegistered.TabIndex = 7;
+            this.alreadyRegistered.TabIndex = 8;
             this.alreadyRegistered.TabStop = true;
             this.alreadyRegistered.Text = "Already have an account?";
-            this.alreadyRegistered.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.alreadyRegistered_LinkClicked);
+            this.alreadyRegistered.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AlreadyRegistered_LinkClicked);
             // 
             // label4
             // 
@@ -172,7 +182,7 @@
             this.cPassword.Name = "cPassword";
             this.cPassword.PasswordChar = '*';
             this.cPassword.Size = new System.Drawing.Size(275, 26);
-            this.cPassword.TabIndex = 5;
+            this.cPassword.TabIndex = 6;
             // 
             // label5
             // 
@@ -245,16 +255,6 @@
             this.lName.Size = new System.Drawing.Size(275, 26);
             this.lName.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CoffeeShop_IMS.Properties.Resources.coffee_cup;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // showPass
             // 
             this.showPass.AutoSize = true;
@@ -262,9 +262,9 @@
             this.showPass.Location = new System.Drawing.Point(557, 378);
             this.showPass.Name = "showPass";
             this.showPass.Size = new System.Drawing.Size(15, 14);
-            this.showPass.TabIndex = 39;
+            this.showPass.TabIndex = 5;
             this.showPass.UseVisualStyleBackColor = true;
-            this.showPass.CheckedChanged += new System.EventHandler(this.showPass_CheckedChanged);
+            this.showPass.CheckedChanged += new System.EventHandler(this.ShowPass_CheckedChanged);
             // 
             // RegisterForm
             // 
@@ -304,8 +304,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Register_btn;
         private System.Windows.Forms.LinkLabel alreadyRegistered;
         private System.Windows.Forms.Label label4;
@@ -321,7 +319,9 @@
         private System.Windows.Forms.TextBox contactNo;
         private System.Windows.Forms.TextBox uName;
         private System.Windows.Forms.TextBox lName;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox showPass;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

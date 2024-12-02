@@ -14,7 +14,7 @@ namespace CoffeeShop_IMS
             InitializeComponent();
             FormStylingCorners.ApplyRoundedCorners(this, 20, 20); // apply rounded corners
         }
-        private void logIn_btn_Click(object sender, EventArgs e)
+        private void LogIn_btn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -79,12 +79,12 @@ namespace CoffeeShop_IMS
             return hash.ToString();
         }
 
-        private void login_showPass_CheckedChanged(object sender, EventArgs e)
+        private void Login_showPass_CheckedChanged(object sender, EventArgs e)
         {
             loginPassword.PasswordChar = showPass.Checked ? '\0' : '*';
         }
 
-        private void createAcc_btn_Click(object sender, EventArgs e)
+        private void CreateAcc_btn_Click(object sender, EventArgs e)
         {
             RegisterForm rf = new RegisterForm();
             rf.Show();

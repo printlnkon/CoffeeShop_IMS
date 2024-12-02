@@ -101,6 +101,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.helloGreeting = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.logout_btn = new System.Windows.Forms.Button();
             this.deleteUserPanel = new System.Windows.Forms.Panel();
             this.deletelastName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -141,6 +142,7 @@
             this.createUserPanel.SuspendLayout();
             this.greetingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.headerPanel.SuspendLayout();
             this.deleteUserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deletedataGridView)).BeginInit();
             this.SuspendLayout();
@@ -181,7 +183,7 @@
             this.editlastName.Multiline = true;
             this.editlastName.Name = "editlastName";
             this.editlastName.Size = new System.Drawing.Size(275, 26);
-            this.editlastName.TabIndex = 35;
+            this.editlastName.TabIndex = 1;
             // 
             // label3
             // 
@@ -206,7 +208,7 @@
             this.editfirstName.Multiline = true;
             this.editfirstName.Name = "editfirstName";
             this.editfirstName.Size = new System.Drawing.Size(275, 26);
-            this.editfirstName.TabIndex = 33;
+            this.editfirstName.TabIndex = 0;
             // 
             // firstName
             // 
@@ -226,12 +228,13 @@
             // 
             this.editDataGridView.AllowUserToAddRows = false;
             this.editDataGridView.AllowUserToDeleteRows = false;
+            this.editDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.editDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.editDataGridView.Location = new System.Drawing.Point(37, 73);
             this.editDataGridView.Name = "editDataGridView";
             this.editDataGridView.ReadOnly = true;
             this.editDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.editDataGridView.Size = new System.Drawing.Size(512, 524);
+            this.editDataGridView.Size = new System.Drawing.Size(468, 524);
             this.editDataGridView.TabIndex = 32;
             this.editDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EditDataGridView_CellContentClick);
             // 
@@ -246,7 +249,7 @@
             this.editAccount.Location = new System.Drawing.Point(765, 549);
             this.editAccount.Name = "editAccount";
             this.editAccount.Size = new System.Drawing.Size(275, 48);
-            this.editAccount.TabIndex = 31;
+            this.editAccount.TabIndex = 5;
             this.editAccount.Text = "Edit Account";
             this.editAccount.UseVisualStyleBackColor = false;
             this.editAccount.Click += new System.EventHandler(this.EditAccount_Click);
@@ -303,13 +306,14 @@
             this.edituserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edituserType.FormattingEnabled = true;
             this.edituserType.Items.AddRange(new object[] {
+            "Admin",
             "Manager",
             "User"});
             this.edituserType.Location = new System.Drawing.Point(765, 469);
             this.edituserType.Margin = new System.Windows.Forms.Padding(2);
             this.edituserType.Name = "edituserType";
             this.edituserType.Size = new System.Drawing.Size(275, 28);
-            this.edituserType.TabIndex = 6;
+            this.edituserType.TabIndex = 4;
             // 
             // label2
             // 
@@ -452,7 +456,7 @@
             this.userContainer.MaximumSize = new System.Drawing.Size(335, 220);
             this.userContainer.MinimumSize = new System.Drawing.Size(335, 45);
             this.userContainer.Name = "userContainer";
-            this.userContainer.Size = new System.Drawing.Size(335, 220);
+            this.userContainer.Size = new System.Drawing.Size(335, 45);
             this.userContainer.TabIndex = 6;
             // 
             // panel11
@@ -566,7 +570,7 @@
             // usersCatalogContainer
             // 
             this.usersCatalogContainer.Controls.Add(this.userLists);
-            this.usersCatalogContainer.Location = new System.Drawing.Point(3, 392);
+            this.usersCatalogContainer.Location = new System.Drawing.Point(3, 217);
             this.usersCatalogContainer.Name = "usersCatalogContainer";
             this.usersCatalogContainer.Size = new System.Drawing.Size(335, 47);
             this.usersCatalogContainer.TabIndex = 6;
@@ -635,7 +639,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(42, 139);
+            this.label7.Location = new System.Drawing.Point(42, 140);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 16);
@@ -650,7 +654,7 @@
             this.pictureBox4.Location = new System.Drawing.Point(33, 17);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(110, 127);
+            this.pictureBox4.Size = new System.Drawing.Size(110, 114);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -675,7 +679,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(46, 139);
+            this.label8.Location = new System.Drawing.Point(46, 150);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 16);
@@ -711,7 +715,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(7, 139);
+            this.label5.Location = new System.Drawing.Point(7, 140);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 16);
@@ -745,7 +749,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(25, 139);
+            this.label4.Location = new System.Drawing.Point(25, 149);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 16);
@@ -758,7 +762,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(33, 17);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox2.Size = new System.Drawing.Size(110, 127);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -796,7 +800,7 @@
             this.createUserPanel.Controls.Add(this.username_label);
             this.createUserPanel.Controls.Add(this.lastName_label);
             this.createUserPanel.Controls.Add(this.firstName_label);
-            this.createUserPanel.Location = new System.Drawing.Point(281, 159);
+            this.createUserPanel.Location = new System.Drawing.Point(281, 161);
             this.createUserPanel.Margin = new System.Windows.Forms.Padding(2);
             this.createUserPanel.MaximumSize = new System.Drawing.Size(1307, 647);
             this.createUserPanel.MinimumSize = new System.Drawing.Size(1098, 647);
@@ -813,7 +817,7 @@
             this.showPass.Location = new System.Drawing.Point(960, 178);
             this.showPass.Name = "showPass";
             this.showPass.Size = new System.Drawing.Size(15, 14);
-            this.showPass.TabIndex = 32;
+            this.showPass.TabIndex = 5;
             this.showPass.UseVisualStyleBackColor = true;
             this.showPass.CheckedChanged += new System.EventHandler(this.ShowPass_CheckedChanged);
             // 
@@ -825,10 +829,10 @@
             this.createAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createAccount.ForeColor = System.Drawing.Color.White;
-            this.createAccount.Location = new System.Drawing.Point(748, 493);
+            this.createAccount.Location = new System.Drawing.Point(706, 478);
             this.createAccount.Name = "createAccount";
-            this.createAccount.Size = new System.Drawing.Size(185, 59);
-            this.createAccount.TabIndex = 31;
+            this.createAccount.Size = new System.Drawing.Size(275, 48);
+            this.createAccount.TabIndex = 8;
             this.createAccount.Text = "Create Account";
             this.createAccount.UseVisualStyleBackColor = false;
             this.createAccount.Click += new System.EventHandler(this.CreateAccount_Click);
@@ -843,7 +847,7 @@
             this.confirmPassword_txtBox.Name = "confirmPassword_txtBox";
             this.confirmPassword_txtBox.PasswordChar = '*';
             this.confirmPassword_txtBox.Size = new System.Drawing.Size(275, 26);
-            this.confirmPassword_txtBox.TabIndex = 5;
+            this.confirmPassword_txtBox.TabIndex = 6;
             // 
             // createPassword_txtBox
             // 
@@ -911,13 +915,14 @@
             this.userType_comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userType_comboBox.FormattingEnabled = true;
             this.userType_comboBox.Items.AddRange(new object[] {
+            "Admin",
             "Manager",
             "User"});
             this.userType_comboBox.Location = new System.Drawing.Point(706, 407);
             this.userType_comboBox.Margin = new System.Windows.Forms.Padding(2);
             this.userType_comboBox.Name = "userType_comboBox";
             this.userType_comboBox.Size = new System.Drawing.Size(275, 28);
-            this.userType_comboBox.TabIndex = 6;
+            this.userType_comboBox.TabIndex = 7;
             // 
             // userType_label
             // 
@@ -1019,6 +1024,7 @@
             this.greetingPanel.Name = "greetingPanel";
             this.greetingPanel.Size = new System.Drawing.Size(115, 130);
             this.greetingPanel.TabIndex = 75;
+            this.greetingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.GreetingPanel_Paint);
             // 
             // pictureBox1
             // 
@@ -1046,11 +1052,27 @@
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.Sienna;
+            this.headerPanel.Controls.Add(this.logout_btn);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(280, 0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(1090, 96);
             this.headerPanel.TabIndex = 74;
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.FlatAppearance.BorderSize = 0;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Image = ((System.Drawing.Image)(resources.GetObject("logout_btn.Image")));
+            this.logout_btn.Location = new System.Drawing.Point(829, 7);
+            this.logout_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(77, 58);
+            this.logout_btn.TabIndex = 66;
+            this.logout_btn.UseVisualStyleBackColor = true;
+            this.logout_btn.Click += new System.EventHandler(this.Logout_btn_Click);
             // 
             // deleteUserPanel
             // 
@@ -1088,7 +1110,7 @@
             this.deletelastName.Multiline = true;
             this.deletelastName.Name = "deletelastName";
             this.deletelastName.Size = new System.Drawing.Size(275, 26);
-            this.deletelastName.TabIndex = 35;
+            this.deletelastName.TabIndex = 1;
             // 
             // label6
             // 
@@ -1113,7 +1135,7 @@
             this.deletefirstName.Multiline = true;
             this.deletefirstName.Name = "deletefirstName";
             this.deletefirstName.Size = new System.Drawing.Size(275, 26);
-            this.deletefirstName.TabIndex = 33;
+            this.deletefirstName.TabIndex = 0;
             // 
             // label11
             // 
@@ -1133,14 +1155,15 @@
             // 
             this.deletedataGridView.AllowUserToAddRows = false;
             this.deletedataGridView.AllowUserToDeleteRows = false;
+            this.deletedataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.deletedataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.deletedataGridView.Location = new System.Drawing.Point(37, 73);
             this.deletedataGridView.Name = "deletedataGridView";
             this.deletedataGridView.ReadOnly = true;
             this.deletedataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.deletedataGridView.Size = new System.Drawing.Size(512, 524);
+            this.deletedataGridView.Size = new System.Drawing.Size(468, 524);
             this.deletedataGridView.TabIndex = 32;
-            this.deletedataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deletedataGridView_CellContentClick);
+            this.deletedataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeletedataGridView_CellContentClick);
             // 
             // deleteAccount
             // 
@@ -1153,10 +1176,10 @@
             this.deleteAccount.Location = new System.Drawing.Point(765, 549);
             this.deleteAccount.Name = "deleteAccount";
             this.deleteAccount.Size = new System.Drawing.Size(275, 48);
-            this.deleteAccount.TabIndex = 31;
+            this.deleteAccount.TabIndex = 5;
             this.deleteAccount.Text = "Delete Account";
             this.deleteAccount.UseVisualStyleBackColor = false;
-            this.deleteAccount.Click += new System.EventHandler(this.deleteAccount_Click);
+            this.deleteAccount.Click += new System.EventHandler(this.DeleteAccount_Click);
             // 
             // deletecontactNo
             // 
@@ -1216,7 +1239,7 @@
             this.deleteuserType.Margin = new System.Windows.Forms.Padding(2);
             this.deleteuserType.Name = "deleteuserType";
             this.deleteuserType.Size = new System.Drawing.Size(275, 28);
-            this.deleteuserType.TabIndex = 6;
+            this.deleteuserType.TabIndex = 4;
             // 
             // label14
             // 
@@ -1324,6 +1347,7 @@
             this.greetingPanel.ResumeLayout(false);
             this.greetingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.headerPanel.ResumeLayout(false);
             this.deleteUserPanel.ResumeLayout(false);
             this.deleteUserPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deletedataGridView)).EndInit();
@@ -1420,5 +1444,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button logout_btn;
     }
 }
