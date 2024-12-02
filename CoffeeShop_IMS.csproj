@@ -125,7 +125,13 @@
     <Compile Include="UserDashboard.Designer.cs">
       <DependentUpon>UserDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="userDetails.cs" />
+    <Compile Include="UserDetails.cs" />
+    <Compile Include="UserLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLists.Designer.cs">
+      <DependentUpon>UserLists.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserDashboard.resx">
       <DependentUpon>UserDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLists.resx">
+      <DependentUpon>UserLists.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

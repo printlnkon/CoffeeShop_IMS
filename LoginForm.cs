@@ -30,7 +30,7 @@ namespace CoffeeShop_IMS
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        userDetails user = new userDetails();
+                        UserDetails user = new UserDetails();
                         user.setUname((string)reader["username"].ToString());
 
                         if ((string)reader["usertype"].ToString() == "Admin")

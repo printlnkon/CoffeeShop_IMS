@@ -1,8 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CoffeeShop_IMS
@@ -15,14 +20,27 @@ namespace CoffeeShop_IMS
         {
             InitializeComponent();
             FormStylingCorners.ApplyRoundedCorners(this, 20, 20); // apply rounded corners
-            this.DoubleBuffered = true; // prevent flickering animation 
+        }
+        private void AdminDashboard1_Load(object sender, EventArgs e)
+        {
+            FillEditGridView();
+            FillDeleteGridView();
+        }
+        private void createUser_btn_Click(object sender, EventArgs e)
+        {
+            createUserPanel.BringToFront();
+        }
+        private void editUser_btn_Click(object sender, EventArgs e)
+        {
+            editUserPanel.BringToFront();
+        }
+        private void DeleteUser_btn_Click(object sender, EventArgs e)
+        {
+            deleteUserPanel.BringToFront();
         }
 
-        private void AdminDashboard_Load(object sender, EventArgs e)
-        {
-            UpdateGridView();
-        }
-        private void sidebarTimer_Tick(object sender, EventArgs e)
+        // ---------- start of sidebar function ---------- //
+        private void SidebarTimer_Tick(object sender, EventArgs e)
         {
             if (menuExpand)
             {
@@ -47,6 +65,33 @@ namespace CoffeeShop_IMS
                 }
             }
 
+        }
+        private void UserTimer_Tick(object sender, EventArgs e)
+        {
+            if (userCollapse)
+            {
+                // expand drop down bar
+                userContainer.Height += 10;
+                if (userContainer.Height == userContainer.MaximumSize.Height)
+                {
+                    userCollapse = false;
+                    userTimer.Stop();
+                }
+            }
+            else
+            {
+                // shrink drop down bar
+                userContainer.Height -= 10;
+                if (userContainer.Height == userContainer.MinimumSize.Height)
+                {
+                    userCollapse = true;
+                    userTimer.Stop();
+                }
+            }
+        }
+        private void Menu_btn_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
         }
         private void AdjustPanel()
         {
@@ -86,56 +131,18 @@ namespace CoffeeShop_IMS
             }
 
         }
-        private void menuButton_Click(object sender, EventArgs e)
-        {
-            sidebarTimer.Start();
-        }
-
-        private void userTimer_Tick(object sender, EventArgs e)
-        {
-            if (userCollapse)
-            {
-                // expand drop down bar
-                userContainer.Height += 10;
-                if (userContainer.Height == userContainer.MaximumSize.Height)
-                {
-                    userCollapse = false;
-                    userTimer.Stop();
-                }
-            }
-            else
-            {
-                // shrink drop down bar
-                userContainer.Height -= 10;
-                if (userContainer.Height == userContainer.MinimumSize.Height)
-                {
-                    userCollapse = true;
-                    userTimer.Stop();
-                }
-            }
-        }
-        private void userButton_Click(object sender, EventArgs e)
+        private void UserManagement_btn_Click(object sender, EventArgs e)
         {
             userTimer.Start();
         }
-
-        private void dashboard_btn_Click(object sender, EventArgs e)
+        private void Dashboard_btn_Click(object sender, EventArgs e)
         {
             dashboardPanel.BringToFront();
         }
+        // ---------- end of sidebar function ---------- //
 
-        // ---------- create account function ---------- //
-        private void createUser_btn_Click(object sender, EventArgs e)
-        {
-            createUserPanel.BringToFront();
-        }
-
-        private void showPass_CheckedChanged(object sender, EventArgs e)
-        {
-            createPassword_txtBox.PasswordChar = showPass.Checked ? '\0' : '*';
-        }
-
-        private void createUserAccount_btn_Click(object sender, EventArgs e)
+        // ---------- start of create user function ---------- //
+        private void CreateAccount_Click(object sender, EventArgs e)
         {
             if (firstName_txtBox.Text != "" && lastName_txtBox.Text != "" && userName_txtBox.Text != "" && contactNo_txtBox.Text != "" && createPassword_txtBox.Text != "" && confirmPassword_txtBox.Text != "" && userType_comboBox.Text != "")
             {
@@ -173,6 +180,9 @@ namespace CoffeeShop_IMS
                             confirmPassword_txtBox.Clear();
                             userType_comboBox.SelectedIndex = -1;
                             firstName_txtBox.Focus();
+
+                            FillEditGridView();
+                            FillDeleteGridView();
                         }
                         catch (MySqlException)
                         {
@@ -198,7 +208,10 @@ namespace CoffeeShop_IMS
                 MessageBox.Show("Please fill out all fields.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
         }
-
+        private void ShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            createPassword_txtBox.PasswordChar = showPass.Checked ? '\0' : '*';
+        }
         public static string MD5Hash(string input)
         {
             StringBuilder hash = new StringBuilder();
@@ -211,143 +224,45 @@ namespace CoffeeShop_IMS
             }
             return hash.ToString();
         }
+        // ---------- end of create user function ---------- //
 
-        //---------- edit user function ----------//
-        private void editUser_btn_Click(object sender, EventArgs e)
+        // ---------- start of edit user function ---------- //
+        private void EditAccount_Click(object sender, EventArgs e)
         {
-            editUserPanel.BringToFront();
-        }
-
-        void UpdateGridView()
-        {
-            try
-            {
-                using (MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;"))
-                {
-                    conn.Open();
-
-                    string query = "SELECT id, firstName, lastName, userName, contactNo, userType FROM users";
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-
-                    // Clear existing columns
-                    //dataGridView.Columns.Clear();
-
-                    // Set AutoGenerateColumns to false
-                    //dataGridView.AutoGenerateColumns = false;
-
-                    // Add columns manually
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "id",
-                        HeaderText = "ID",
-                        Name = "id",
-                        ReadOnly = true,
-                        Width = 50
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "firstName",
-                        HeaderText = "First Name",
-                        Name = "firstName"
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "lastName",
-                        HeaderText = "Last Name",
-                        Name = "lastName"
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "userName",
-                        HeaderText = "Username",
-                        Name = "userName"
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "contactNo",
-                        HeaderText = "Contact Number",
-                        Name = "contactNo"
-                    });
-
-                    dataGridView.Columns.Add(new DataGridViewTextBoxColumn
-                    {
-                        DataPropertyName = "userType",
-                        HeaderText = "User Type",
-                        Name = "userType"
-                    });
-
-                    dataGridView.DataSource = dt;
-                    dataGridView.Refresh();
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show($"Error connecting to the database: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView.Rows.Count)
-            {
-                DataGridViewRow row = dataGridView.Rows[e.RowIndex];
-                editID_txtbox.Text = row.Cells[0].Value.ToString();
-                editfirstName_txtBox.Text = row.Cells[1].Value.ToString();
-                editlastName_txtBox.Text = row.Cells[2].Value.ToString();
-                edituserName_txtBox.Text = row.Cells[3].Value.ToString();
-                editcontactNo_txtBox.Text = row.Cells[4].Value.ToString();
-                edituserType_comboBox.Text = row.Cells[5].Value.ToString();
-
-                // Make ID textbox read-only
-                editID_txtbox.ReadOnly = true;
-            }
-        }
-
-        private void updateAccount_Click(object sender, EventArgs e)
-        {
-            if (editfirstName_txtBox.Text != "" && editlastName_txtBox.Text != "" && editID_txtbox.Text != "" && edituserName_txtBox.Text != "" && editcontactNo_txtBox.Text != "" && edituserType_comboBox.Text != "")
+            if (editfirstName.Text != "" && editlastName.Text != "" && editId.Text != "" && edituserName.Text != "" && editcontactNo.Text != "" && edituserType.Text != "")
             {
                 try
                 {
-                    using (MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;"))
-                    {
-                        string query = "UPDATE users SET firstName = @firstName, lastName = @lastName, userName = @userName, contactNo = @contactNo, userType = @userType WHERE id = @id";
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;");
 
-                        // parameters to avoid sql injection
-                        cmd.Parameters.AddWithValue("@id", editID_txtbox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@firstName", editfirstName_txtBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@lastName", editlastName_txtBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@userName", edituserName_txtBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@contactNo", editcontactNo_txtBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("@userType", edituserType_comboBox.Text.Trim());
+                    string query = "UPDATE users SET firstName = @firstName, lastName = @lastName, userName = @userName, contactNo = @contactNo, userType = @userType WHERE id = @id";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
+                    // parameters to avoid sql injection
+                    cmd.Parameters.AddWithValue("@id", editId.Text.Trim());
+                    cmd.Parameters.AddWithValue("@firstName", editfirstName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@lastName", editlastName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@userName", edituserName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@contactNo", editcontactNo.Text.Trim());
+                    cmd.Parameters.AddWithValue("@userType", edituserType.Text.Trim());
 
-                        MessageBox.Show("Account updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
 
-                        // automatically clear textboxes and combobox
-                        editID_txtbox.Enabled = false;
-                        editID_txtbox.Clear();
-                        editfirstName_txtBox.Clear();
-                        editlastName_txtBox.Clear();
-                        edituserName_txtBox.Clear();
-                        editcontactNo_txtBox.Clear();
-                        edituserType_comboBox.SelectedIndex = -1;
-                        UpdateGridView();
-                    }
+                    MessageBox.Show("Account updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // automatically clear textboxes and combobox
+                    editId.Enabled = false;
+                    editId.Clear();
+                    editfirstName.Clear();
+                    editlastName.Clear();
+                    edituserName.Clear();
+                    editcontactNo.Clear();
+                    edituserType.SelectedIndex = -1;
+
+                    FillEditGridView();
+                    FillDeleteGridView();
                 }
                 catch (Exception ex)
                 {
@@ -359,5 +274,214 @@ namespace CoffeeShop_IMS
                 MessageBox.Show("Please select an account to update. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void FillEditGridView()
+        {
+            try
+            {
+                // Connection string for MySQL database
+                string connectionString = @"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;";
+
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    // Open the database connection
+                    conn.Open();
+
+                    // SQL query to fetch user data
+                    string query = "SELECT id, firstName, lastName, userName, contactNo, userType FROM users";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+
+                    // Load data into a DataTable
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    // Bind the DataTable to the DataGridView
+                    editDataGridView.DataSource = null; // Reset the data source (optional)
+                    editDataGridView.DataSource = dt;   // Assign the new data source
+                    // Ensure the grid refreshes properly
+                    editDataGridView.Refresh();
+
+                    // Optional: Set auto-generate columns if needed
+                    editDataGridView.AutoGenerateColumns = true;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                // Handle MySQL-specific errors
+                MessageBox.Show($"Error connecting to the database: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                // Handle general exceptions
+                MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void EditDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                // Ensure the click is on a valid row (not a header or invalid row index)   
+                if (e.RowIndex >= 0 && e.RowIndex < editDataGridView.Rows.Count)
+                {
+                    // Get the selected row
+                    DataGridViewRow row = this.editDataGridView.Rows[e.RowIndex];
+
+                    // Safely retrieve cell values and handle potential nulls
+                    editId.Text = row.Cells["id"]?.Value?.ToString() ?? string.Empty;
+                    editfirstName.Text = row.Cells["firstName"]?.Value?.ToString() ?? string.Empty;
+                    editlastName.Text = row.Cells["lastName"]?.Value?.ToString() ?? string.Empty;
+                    edituserName.Text = row.Cells["userName"]?.Value?.ToString() ?? string.Empty;
+                    editcontactNo.Text = row.Cells["contactNo"]?.Value?.ToString() ?? string.Empty;
+                    edituserType.Text = row.Cells["userType"]?.Value?.ToString() ?? string.Empty;
+
+                    // Make ID textbox read-only (optional)
+                    editId.ReadOnly = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any unexpected errors
+                MessageBox.Show($"Error selecting data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // ---------- end of edit user function ---------- //
+
+        // ---------- start of delete user function ---------- //
+
+        private void deleteAccount_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete this account?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                if (deletefirstName.Text != "" && deletelastName.Text != "" && deleteId.Text != "" && deleteuserName.Text != "" && deletecontactNo.Text != "" && deleteuserType.Text != "")
+                {
+                    try
+                    {
+                        using (MySqlConnection conn = new MySqlConnection(@"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;"))
+                        {
+                            string query = "DELETE FROM users WHERE id = @id";
+                            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                            // parameters to avoid sql injection
+                            cmd.Parameters.AddWithValue("@id", deleteId.Text.Trim());
+
+                            conn.Open();
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            conn.Close();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Account deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // clear textboxes and reset combobox
+                                deleteId.Enabled = false;
+                                deleteId.Clear();
+                                deletefirstName.Clear();
+                                deletelastName.Clear();
+                                deleteuserName.Clear();
+                                deletecontactNo.Clear();
+                                deleteuserType.SelectedIndex = -1;
+
+                                FillEditGridView();
+                                FillDeleteGridView();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error error account: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select an account to delete. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void FillDeleteGridView()
+        {
+            try
+            {
+                // Connection string for MySQL database
+                string connectionString = @"datasource=127.0.0.1;port=3306;SslMode=none;username=root;password=;database=coffeeshop_ims_csharp;";
+
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    // Open the database connection
+                    conn.Open();
+
+                    // SQL query to fetch user data
+                    string query = "SELECT id, firstName, lastName, userName, contactNo, userType FROM users";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+
+                    // Load data into a DataTable
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    // Bind the DataTable to the DataGridView
+                    deletedataGridView.DataSource = null; // Reset the data source (optional)
+                    deletedataGridView.DataSource = dt;   // Assign the new data source
+                    // Ensure the grid refreshes properly
+                    deletedataGridView.Refresh();
+
+                    // Optional: Set auto-generate columns if needed
+                    deletedataGridView.AutoGenerateColumns = true;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                // Handle MySQL-specific errors
+                MessageBox.Show($"Error connecting to the database: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                // Handle general exceptions
+                MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void deletedataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                // Ensure the click is on a valid row (not a header or invalid row index)   
+                if (e.RowIndex >= 0 && e.RowIndex < deletedataGridView.Rows.Count)
+                {
+                    // Get the selected row
+                    DataGridViewRow row = deletedataGridView.Rows[e.RowIndex];
+
+                    // Safely retrieve cell values using column names or indexes and handle potential nulls
+                    deleteId.Text = row.Cells["id"]?.Value?.ToString()?.Trim() ?? string.Empty;
+                    deletefirstName.Text = row.Cells["firstName"]?.Value?.ToString()?.Trim() ?? string.Empty;
+                    deletelastName.Text = row.Cells["lastName"]?.Value?.ToString()?.Trim() ?? string.Empty;
+                    deleteuserName.Text = row.Cells["userName"]?.Value?.ToString()?.Trim() ?? string.Empty;
+                    deletecontactNo.Text = row.Cells["contactNo"]?.Value?.ToString()?.Trim() ?? string.Empty;
+                    deleteuserType.Text = row.Cells["userType"]?.Value?.ToString()?.Trim() ?? string.Empty;
+
+                    // Optionally, make the ID textbox read-only to prevent accidental changes
+                    editId.ReadOnly = true;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid row selected. Please select a valid account.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any unexpected errors
+                MessageBox.Show($"Error selecting data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // ---------- end of delete user function ---------- //
+
+        // ---------- start of user lists function ---------- //
+        private void UserLists_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserLists ul = new UserLists();
+            ul.ShowDialog();
+            this.Hide();
+        }
+        // ---------- end of user lists function ---------- //
+
+
     }
 }

@@ -30,6 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
+            this.editUserPanel = new System.Windows.Forms.Panel();
+            this.editlastName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.editfirstName = new System.Windows.Forms.TextBox();
+            this.firstName = new System.Windows.Forms.Label();
+            this.editDataGridView = new System.Windows.Forms.DataGridView();
+            this.editAccount = new System.Windows.Forms.Button();
+            this.editcontactNo = new System.Windows.Forms.TextBox();
+            this.edituserName = new System.Windows.Forms.TextBox();
+            this.editId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.edituserType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.menuContainer = new System.Windows.Forms.Panel();
             this.menuLabel = new System.Windows.Forms.Label();
@@ -46,12 +62,26 @@
             this.userManagementPanel = new System.Windows.Forms.Panel();
             this.userManagement_btn = new System.Windows.Forms.Button();
             this.usersCatalogContainer = new System.Windows.Forms.Panel();
-            this.usersCatalog_btn = new System.Windows.Forms.Button();
+            this.userLists = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.userTimer = new System.Windows.Forms.Timer(this.components);
+            this.dashboardPanel = new System.Windows.Forms.Panel();
+            this.checkOrdersPanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.checkItemsPanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.checkManagerPanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.checkUserPanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.adminDashboard_label = new System.Windows.Forms.Label();
             this.createUserPanel = new System.Windows.Forms.Panel();
             this.showPass = new System.Windows.Forms.CheckBox();
-            this.createUserAccount_btn = new System.Windows.Forms.Button();
+            this.createAccount = new System.Windows.Forms.Button();
             this.confirmPassword_txtBox = new System.Windows.Forms.TextBox();
             this.createPassword_txtBox = new System.Windows.Forms.TextBox();
             this.contactNo_txtBox = new System.Windows.Forms.TextBox();
@@ -67,40 +97,28 @@
             this.username_label = new System.Windows.Forms.Label();
             this.lastName_label = new System.Windows.Forms.Label();
             this.firstName_label = new System.Windows.Forms.Label();
-            this.headerPanel = new System.Windows.Forms.Panel();
             this.greetingPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.helloGreeting = new System.Windows.Forms.Label();
-            this.editUserPanel = new System.Windows.Forms.Panel();
-            this.editlastName_txtBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.editfirstName_txtBox = new System.Windows.Forms.TextBox();
-            this.firstName = new System.Windows.Forms.Label();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.updateAccount = new System.Windows.Forms.Button();
-            this.editcontactNo_txtBox = new System.Windows.Forms.TextBox();
-            this.edituserName_txtBox = new System.Windows.Forms.TextBox();
-            this.editID_txtbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.edituserType_comboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.adminDashboard_label = new System.Windows.Forms.Label();
-            this.checkUserPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.checkManagerPanel = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.checkItemsPanel = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.checkOrdersPanel = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.dashboardPanel = new System.Windows.Forms.Panel();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.deleteUserPanel = new System.Windows.Forms.Panel();
+            this.deletelastName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.deletefirstName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.deletedataGridView = new System.Windows.Forms.DataGridView();
+            this.deleteAccount = new System.Windows.Forms.Button();
+            this.deletecontactNo = new System.Windows.Forms.TextBox();
+            this.deleteuserName = new System.Windows.Forms.TextBox();
+            this.deleteId = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.deleteuserType = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.editUserPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editDataGridView)).BeginInit();
             this.sidebar.SuspendLayout();
             this.menuContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu_btn)).BeginInit();
@@ -111,21 +129,243 @@
             this.panel7.SuspendLayout();
             this.userManagementPanel.SuspendLayout();
             this.usersCatalogContainer.SuspendLayout();
+            this.dashboardPanel.SuspendLayout();
+            this.checkOrdersPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.checkItemsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.checkManagerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.checkUserPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.createUserPanel.SuspendLayout();
             this.greetingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.editUserPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.checkUserPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.checkManagerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.checkItemsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.checkOrdersPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.dashboardPanel.SuspendLayout();
+            this.deleteUserPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deletedataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // editUserPanel
+            // 
+            this.editUserPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editUserPanel.Controls.Add(this.editlastName);
+            this.editUserPanel.Controls.Add(this.label3);
+            this.editUserPanel.Controls.Add(this.editfirstName);
+            this.editUserPanel.Controls.Add(this.firstName);
+            this.editUserPanel.Controls.Add(this.editDataGridView);
+            this.editUserPanel.Controls.Add(this.editAccount);
+            this.editUserPanel.Controls.Add(this.editcontactNo);
+            this.editUserPanel.Controls.Add(this.edituserName);
+            this.editUserPanel.Controls.Add(this.editId);
+            this.editUserPanel.Controls.Add(this.label1);
+            this.editUserPanel.Controls.Add(this.edituserType);
+            this.editUserPanel.Controls.Add(this.label2);
+            this.editUserPanel.Controls.Add(this.label9);
+            this.editUserPanel.Controls.Add(this.label10);
+            this.editUserPanel.Controls.Add(this.label12);
+            this.editUserPanel.Location = new System.Drawing.Point(280, 159);
+            this.editUserPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.editUserPanel.MaximumSize = new System.Drawing.Size(1311, 645);
+            this.editUserPanel.MinimumSize = new System.Drawing.Size(1102, 645);
+            this.editUserPanel.Name = "editUserPanel";
+            this.editUserPanel.Size = new System.Drawing.Size(1102, 645);
+            this.editUserPanel.TabIndex = 70;
+            // 
+            // editlastName
+            // 
+            this.editlastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editlastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editlastName.Location = new System.Drawing.Point(765, 235);
+            this.editlastName.Multiline = true;
+            this.editlastName.Name = "editlastName";
+            this.editlastName.Size = new System.Drawing.Size(275, 26);
+            this.editlastName.TabIndex = 35;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Sienna;
+            this.label3.Location = new System.Drawing.Point(566, 231);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 33);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Last Name:";
+            // 
+            // editfirstName
+            // 
+            this.editfirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editfirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editfirstName.Location = new System.Drawing.Point(765, 157);
+            this.editfirstName.Multiline = true;
+            this.editfirstName.Name = "editfirstName";
+            this.editfirstName.Size = new System.Drawing.Size(275, 26);
+            this.editfirstName.TabIndex = 33;
+            // 
+            // firstName
+            // 
+            this.firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.firstName.AutoSize = true;
+            this.firstName.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstName.ForeColor = System.Drawing.Color.Sienna;
+            this.firstName.Location = new System.Drawing.Point(566, 152);
+            this.firstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(158, 33);
+            this.firstName.TabIndex = 34;
+            this.firstName.Text = "First Name:";
+            // 
+            // editDataGridView
+            // 
+            this.editDataGridView.AllowUserToAddRows = false;
+            this.editDataGridView.AllowUserToDeleteRows = false;
+            this.editDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.editDataGridView.Location = new System.Drawing.Point(37, 73);
+            this.editDataGridView.Name = "editDataGridView";
+            this.editDataGridView.ReadOnly = true;
+            this.editDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.editDataGridView.Size = new System.Drawing.Size(512, 524);
+            this.editDataGridView.TabIndex = 32;
+            this.editDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EditDataGridView_CellContentClick);
+            // 
+            // editAccount
+            // 
+            this.editAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editAccount.BackColor = System.Drawing.Color.Sienna;
+            this.editAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editAccount.ForeColor = System.Drawing.Color.White;
+            this.editAccount.Location = new System.Drawing.Point(765, 549);
+            this.editAccount.Name = "editAccount";
+            this.editAccount.Size = new System.Drawing.Size(275, 48);
+            this.editAccount.TabIndex = 31;
+            this.editAccount.Text = "Edit Account";
+            this.editAccount.UseVisualStyleBackColor = false;
+            this.editAccount.Click += new System.EventHandler(this.EditAccount_Click);
+            // 
+            // editcontactNo
+            // 
+            this.editcontactNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editcontactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editcontactNo.Location = new System.Drawing.Point(765, 391);
+            this.editcontactNo.Multiline = true;
+            this.editcontactNo.Name = "editcontactNo";
+            this.editcontactNo.Size = new System.Drawing.Size(275, 26);
+            this.editcontactNo.TabIndex = 3;
+            // 
+            // edituserName
+            // 
+            this.edituserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.edituserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edituserName.Location = new System.Drawing.Point(765, 313);
+            this.edituserName.Multiline = true;
+            this.edituserName.Name = "edituserName";
+            this.edituserName.Size = new System.Drawing.Size(275, 26);
+            this.edituserName.TabIndex = 2;
+            // 
+            // editId
+            // 
+            this.editId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editId.Location = new System.Drawing.Point(765, 79);
+            this.editId.Multiline = true;
+            this.editId.Name = "editId";
+            this.editId.Size = new System.Drawing.Size(79, 26);
+            this.editId.TabIndex = 0;
+            this.editId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Sienna;
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(432, 56);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Edit User Account";
+            // 
+            // edituserType
+            // 
+            this.edituserType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.edituserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edituserType.FormattingEnabled = true;
+            this.edituserType.Items.AddRange(new object[] {
+            "Manager",
+            "User"});
+            this.edituserType.Location = new System.Drawing.Point(765, 469);
+            this.edituserType.Margin = new System.Windows.Forms.Padding(2);
+            this.edituserType.Name = "edituserType";
+            this.edituserType.Size = new System.Drawing.Size(275, 28);
+            this.edituserType.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Sienna;
+            this.label2.Location = new System.Drawing.Point(566, 468);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 33);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "User Type:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Sienna;
+            this.label9.Location = new System.Drawing.Point(566, 389);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(185, 33);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Contact No.:";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Sienna;
+            this.label10.Location = new System.Drawing.Point(566, 310);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(160, 33);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Username: ";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Sienna;
+            this.label12.Location = new System.Drawing.Point(566, 73);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 33);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "I.D:";
             // 
             // sidebar
             // 
@@ -140,7 +380,7 @@
             this.sidebar.MinimumSize = new System.Drawing.Size(71, 795);
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(280, 795);
-            this.sidebar.TabIndex = 0;
+            this.sidebar.TabIndex = 71;
             // 
             // menuContainer
             // 
@@ -155,6 +395,7 @@
             // 
             this.menuLabel.AutoSize = true;
             this.menuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLabel.ForeColor = System.Drawing.Color.White;
             this.menuLabel.Location = new System.Drawing.Point(77, 38);
             this.menuLabel.Name = "menuLabel";
             this.menuLabel.Size = new System.Drawing.Size(59, 24);
@@ -172,7 +413,7 @@
             this.menu_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menu_btn.TabIndex = 0;
             this.menu_btn.TabStop = false;
-            this.menu_btn.Click += new System.EventHandler(this.menuButton_Click);
+            this.menu_btn.Click += new System.EventHandler(this.Menu_btn_Click);
             // 
             // dashboardContainer
             // 
@@ -198,7 +439,7 @@
             this.dashboard_btn.Text = "            Dashboard";
             this.dashboard_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboard_btn.UseVisualStyleBackColor = false;
-            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
+            this.dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
             // 
             // userContainer
             // 
@@ -211,7 +452,7 @@
             this.userContainer.MaximumSize = new System.Drawing.Size(335, 220);
             this.userContainer.MinimumSize = new System.Drawing.Size(335, 45);
             this.userContainer.Name = "userContainer";
-            this.userContainer.Size = new System.Drawing.Size(335, 46);
+            this.userContainer.Size = new System.Drawing.Size(335, 220);
             this.userContainer.TabIndex = 6;
             // 
             // panel11
@@ -232,13 +473,14 @@
             this.deleteUser_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteUser_btn.ForeColor = System.Drawing.Color.White;
             this.deleteUser_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deleteUser_btn.Location = new System.Drawing.Point(0, -10);
+            this.deleteUser_btn.Location = new System.Drawing.Point(0, -2);
             this.deleteUser_btn.Name = "deleteUser_btn";
             this.deleteUser_btn.Size = new System.Drawing.Size(335, 57);
             this.deleteUser_btn.TabIndex = 8;
             this.deleteUser_btn.Text = "                Delete User";
             this.deleteUser_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.deleteUser_btn.UseVisualStyleBackColor = false;
+            this.deleteUser_btn.Click += new System.EventHandler(this.DeleteUser_btn_Click);
             // 
             // panel8
             // 
@@ -258,7 +500,7 @@
             this.editUser_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editUser_btn.ForeColor = System.Drawing.Color.White;
             this.editUser_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.editUser_btn.Location = new System.Drawing.Point(0, 0);
+            this.editUser_btn.Location = new System.Drawing.Point(0, 5);
             this.editUser_btn.Name = "editUser_btn";
             this.editUser_btn.Size = new System.Drawing.Size(335, 48);
             this.editUser_btn.TabIndex = 8;
@@ -319,42 +561,218 @@
             this.userManagement_btn.Text = "            User Management";
             this.userManagement_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.userManagement_btn.UseVisualStyleBackColor = false;
-            this.userManagement_btn.Click += new System.EventHandler(this.userButton_Click);
+            this.userManagement_btn.Click += new System.EventHandler(this.UserManagement_btn_Click);
             // 
             // usersCatalogContainer
             // 
-            this.usersCatalogContainer.Controls.Add(this.usersCatalog_btn);
-            this.usersCatalogContainer.Location = new System.Drawing.Point(3, 218);
+            this.usersCatalogContainer.Controls.Add(this.userLists);
+            this.usersCatalogContainer.Location = new System.Drawing.Point(3, 392);
             this.usersCatalogContainer.Name = "usersCatalogContainer";
             this.usersCatalogContainer.Size = new System.Drawing.Size(335, 47);
             this.usersCatalogContainer.TabIndex = 6;
             // 
-            // usersCatalog_btn
+            // userLists
             // 
-            this.usersCatalog_btn.BackColor = System.Drawing.Color.Transparent;
-            this.usersCatalog_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.usersCatalog_btn.FlatAppearance.BorderSize = 0;
-            this.usersCatalog_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usersCatalog_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usersCatalog_btn.ForeColor = System.Drawing.Color.White;
-            this.usersCatalog_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.usersCatalog_btn.Location = new System.Drawing.Point(0, -6);
-            this.usersCatalog_btn.Name = "usersCatalog_btn";
-            this.usersCatalog_btn.Size = new System.Drawing.Size(335, 48);
-            this.usersCatalog_btn.TabIndex = 0;
-            this.usersCatalog_btn.Text = "            Users Catalog";
-            this.usersCatalog_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.usersCatalog_btn.UseVisualStyleBackColor = false;
+            this.userLists.BackColor = System.Drawing.Color.Transparent;
+            this.userLists.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.userLists.FlatAppearance.BorderSize = 0;
+            this.userLists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userLists.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLists.ForeColor = System.Drawing.Color.White;
+            this.userLists.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userLists.Location = new System.Drawing.Point(0, -3);
+            this.userLists.Name = "userLists";
+            this.userLists.Size = new System.Drawing.Size(335, 48);
+            this.userLists.TabIndex = 0;
+            this.userLists.Text = "            Users Lists";
+            this.userLists.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userLists.UseVisualStyleBackColor = false;
+            this.userLists.Click += new System.EventHandler(this.UserLists_Click);
             // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
-            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            this.sidebarTimer.Tick += new System.EventHandler(this.SidebarTimer_Tick);
             // 
             // userTimer
             // 
             this.userTimer.Interval = 10;
-            this.userTimer.Tick += new System.EventHandler(this.userTimer_Tick);
+            this.userTimer.Tick += new System.EventHandler(this.UserTimer_Tick);
+            // 
+            // dashboardPanel
+            // 
+            this.dashboardPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dashboardPanel.Controls.Add(this.checkOrdersPanel);
+            this.dashboardPanel.Controls.Add(this.checkItemsPanel);
+            this.dashboardPanel.Controls.Add(this.checkManagerPanel);
+            this.dashboardPanel.Controls.Add(this.checkUserPanel);
+            this.dashboardPanel.Controls.Add(this.adminDashboard_label);
+            this.dashboardPanel.Location = new System.Drawing.Point(281, 160);
+            this.dashboardPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.dashboardPanel.MaximumSize = new System.Drawing.Size(1299, 640);
+            this.dashboardPanel.MinimumSize = new System.Drawing.Size(1090, 640);
+            this.dashboardPanel.Name = "dashboardPanel";
+            this.dashboardPanel.Size = new System.Drawing.Size(1090, 640);
+            this.dashboardPanel.TabIndex = 72;
+            // 
+            // checkOrdersPanel
+            // 
+            this.checkOrdersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkOrdersPanel.BackColor = System.Drawing.Color.Tan;
+            this.checkOrdersPanel.Controls.Add(this.label7);
+            this.checkOrdersPanel.Controls.Add(this.pictureBox4);
+            this.checkOrdersPanel.Location = new System.Drawing.Point(724, 357);
+            this.checkOrdersPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkOrdersPanel.Name = "checkOrdersPanel";
+            this.checkOrdersPanel.Size = new System.Drawing.Size(181, 234);
+            this.checkOrdersPanel.TabIndex = 67;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(42, 139);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 16);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Check Orders";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(110, 127);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // checkItemsPanel
+            // 
+            this.checkItemsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkItemsPanel.BackColor = System.Drawing.Color.Tan;
+            this.checkItemsPanel.Controls.Add(this.label8);
+            this.checkItemsPanel.Controls.Add(this.pictureBox5);
+            this.checkItemsPanel.Location = new System.Drawing.Point(724, 88);
+            this.checkItemsPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkItemsPanel.Name = "checkItemsPanel";
+            this.checkItemsPanel.Size = new System.Drawing.Size(181, 234);
+            this.checkItemsPanel.TabIndex = 67;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(46, 139);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Check Items";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(110, 127);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // checkManagerPanel
+            // 
+            this.checkManagerPanel.BackColor = System.Drawing.Color.Tan;
+            this.checkManagerPanel.Controls.Add(this.label5);
+            this.checkManagerPanel.Controls.Add(this.pictureBox3);
+            this.checkManagerPanel.Location = new System.Drawing.Point(263, 357);
+            this.checkManagerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkManagerPanel.Name = "checkManagerPanel";
+            this.checkManagerPanel.Size = new System.Drawing.Size(181, 234);
+            this.checkManagerPanel.TabIndex = 67;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(7, 139);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Check Manager Activity";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // checkUserPanel
+            // 
+            this.checkUserPanel.BackColor = System.Drawing.Color.Tan;
+            this.checkUserPanel.Controls.Add(this.label4);
+            this.checkUserPanel.Controls.Add(this.pictureBox2);
+            this.checkUserPanel.Location = new System.Drawing.Point(263, 88);
+            this.checkUserPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkUserPanel.Name = "checkUserPanel";
+            this.checkUserPanel.Size = new System.Drawing.Size(181, 234);
+            this.checkUserPanel.TabIndex = 67;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(25, 139);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Check User Activity";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(110, 114);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // adminDashboard_label
+            // 
+            this.adminDashboard_label.AutoSize = true;
+            this.adminDashboard_label.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDashboard_label.ForeColor = System.Drawing.Color.Sienna;
+            this.adminDashboard_label.Location = new System.Drawing.Point(10, 14);
+            this.adminDashboard_label.Name = "adminDashboard_label";
+            this.adminDashboard_label.Size = new System.Drawing.Size(449, 56);
+            this.adminDashboard_label.TabIndex = 68;
+            this.adminDashboard_label.Text = "Admin Dashboard";
             // 
             // createUserPanel
             // 
@@ -362,7 +780,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.createUserPanel.Controls.Add(this.showPass);
-            this.createUserPanel.Controls.Add(this.createUserAccount_btn);
+            this.createUserPanel.Controls.Add(this.createAccount);
             this.createUserPanel.Controls.Add(this.confirmPassword_txtBox);
             this.createUserPanel.Controls.Add(this.createPassword_txtBox);
             this.createUserPanel.Controls.Add(this.contactNo_txtBox);
@@ -378,13 +796,13 @@
             this.createUserPanel.Controls.Add(this.username_label);
             this.createUserPanel.Controls.Add(this.lastName_label);
             this.createUserPanel.Controls.Add(this.firstName_label);
-            this.createUserPanel.Location = new System.Drawing.Point(280, 168);
+            this.createUserPanel.Location = new System.Drawing.Point(281, 159);
             this.createUserPanel.Margin = new System.Windows.Forms.Padding(2);
             this.createUserPanel.MaximumSize = new System.Drawing.Size(1307, 647);
             this.createUserPanel.MinimumSize = new System.Drawing.Size(1098, 647);
             this.createUserPanel.Name = "createUserPanel";
             this.createUserPanel.Size = new System.Drawing.Size(1098, 647);
-            this.createUserPanel.TabIndex = 68;
+            this.createUserPanel.TabIndex = 73;
             // 
             // showPass
             // 
@@ -397,23 +815,23 @@
             this.showPass.Size = new System.Drawing.Size(15, 14);
             this.showPass.TabIndex = 32;
             this.showPass.UseVisualStyleBackColor = true;
-            this.showPass.CheckedChanged += new System.EventHandler(this.showPass_CheckedChanged);
+            this.showPass.CheckedChanged += new System.EventHandler(this.ShowPass_CheckedChanged);
             // 
-            // createUserAccount_btn
+            // createAccount
             // 
-            this.createUserAccount_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.createAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.createUserAccount_btn.BackColor = System.Drawing.Color.Sienna;
-            this.createUserAccount_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createUserAccount_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createUserAccount_btn.ForeColor = System.Drawing.Color.White;
-            this.createUserAccount_btn.Location = new System.Drawing.Point(748, 493);
-            this.createUserAccount_btn.Name = "createUserAccount_btn";
-            this.createUserAccount_btn.Size = new System.Drawing.Size(185, 59);
-            this.createUserAccount_btn.TabIndex = 31;
-            this.createUserAccount_btn.Text = "Register Account";
-            this.createUserAccount_btn.UseVisualStyleBackColor = false;
-            this.createUserAccount_btn.Click += new System.EventHandler(this.createUserAccount_btn_Click);
+            this.createAccount.BackColor = System.Drawing.Color.Sienna;
+            this.createAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createAccount.ForeColor = System.Drawing.Color.White;
+            this.createAccount.Location = new System.Drawing.Point(748, 493);
+            this.createAccount.Name = "createAccount";
+            this.createAccount.Size = new System.Drawing.Size(185, 59);
+            this.createAccount.TabIndex = 31;
+            this.createAccount.Text = "Create Account";
+            this.createAccount.UseVisualStyleBackColor = false;
+            this.createAccount.Click += new System.EventHandler(this.CreateAccount_Click);
             // 
             // confirmPassword_txtBox
             // 
@@ -591,25 +1009,16 @@
             this.firstName_label.TabIndex = 5;
             this.firstName_label.Text = "First Name:";
             // 
-            // headerPanel
-            // 
-            this.headerPanel.BackColor = System.Drawing.Color.Sienna;
-            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.Location = new System.Drawing.Point(280, 0);
-            this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1090, 96);
-            this.headerPanel.TabIndex = 69;
-            // 
             // greetingPanel
             // 
             this.greetingPanel.BackColor = System.Drawing.Color.Tan;
             this.greetingPanel.Controls.Add(this.pictureBox1);
             this.greetingPanel.Controls.Add(this.helloGreeting);
-            this.greetingPanel.Location = new System.Drawing.Point(1194, -2);
+            this.greetingPanel.Location = new System.Drawing.Point(1205, -1);
             this.greetingPanel.Margin = new System.Windows.Forms.Padding(2);
             this.greetingPanel.Name = "greetingPanel";
             this.greetingPanel.Size = new System.Drawing.Size(115, 130);
-            this.greetingPanel.TabIndex = 71;
+            this.greetingPanel.TabIndex = 75;
             // 
             // pictureBox1
             // 
@@ -634,421 +1043,257 @@
             this.helloGreeting.TabIndex = 3;
             this.helloGreeting.Text = "Hello, ";
             // 
-            // editUserPanel
+            // headerPanel
             // 
-            this.editUserPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.headerPanel.BackColor = System.Drawing.Color.Sienna;
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(280, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(1090, 96);
+            this.headerPanel.TabIndex = 74;
+            // 
+            // deleteUserPanel
+            // 
+            this.deleteUserPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.editUserPanel.Controls.Add(this.editlastName_txtBox);
-            this.editUserPanel.Controls.Add(this.label3);
-            this.editUserPanel.Controls.Add(this.editfirstName_txtBox);
-            this.editUserPanel.Controls.Add(this.firstName);
-            this.editUserPanel.Controls.Add(this.dataGridView);
-            this.editUserPanel.Controls.Add(this.updateAccount);
-            this.editUserPanel.Controls.Add(this.editcontactNo_txtBox);
-            this.editUserPanel.Controls.Add(this.edituserName_txtBox);
-            this.editUserPanel.Controls.Add(this.editID_txtbox);
-            this.editUserPanel.Controls.Add(this.label1);
-            this.editUserPanel.Controls.Add(this.edituserType_comboBox);
-            this.editUserPanel.Controls.Add(this.label2);
-            this.editUserPanel.Controls.Add(this.label9);
-            this.editUserPanel.Controls.Add(this.label10);
-            this.editUserPanel.Controls.Add(this.label12);
-            this.editUserPanel.Location = new System.Drawing.Point(280, 168);
-            this.editUserPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.editUserPanel.MaximumSize = new System.Drawing.Size(1311, 645);
-            this.editUserPanel.MinimumSize = new System.Drawing.Size(1102, 645);
-            this.editUserPanel.Name = "editUserPanel";
-            this.editUserPanel.Size = new System.Drawing.Size(1102, 645);
-            this.editUserPanel.TabIndex = 69;
+            this.deleteUserPanel.Controls.Add(this.deletelastName);
+            this.deleteUserPanel.Controls.Add(this.label6);
+            this.deleteUserPanel.Controls.Add(this.deletefirstName);
+            this.deleteUserPanel.Controls.Add(this.label11);
+            this.deleteUserPanel.Controls.Add(this.deletedataGridView);
+            this.deleteUserPanel.Controls.Add(this.deleteAccount);
+            this.deleteUserPanel.Controls.Add(this.deletecontactNo);
+            this.deleteUserPanel.Controls.Add(this.deleteuserName);
+            this.deleteUserPanel.Controls.Add(this.deleteId);
+            this.deleteUserPanel.Controls.Add(this.label13);
+            this.deleteUserPanel.Controls.Add(this.deleteuserType);
+            this.deleteUserPanel.Controls.Add(this.label14);
+            this.deleteUserPanel.Controls.Add(this.label15);
+            this.deleteUserPanel.Controls.Add(this.label16);
+            this.deleteUserPanel.Controls.Add(this.label17);
+            this.deleteUserPanel.Location = new System.Drawing.Point(280, 159);
+            this.deleteUserPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteUserPanel.MaximumSize = new System.Drawing.Size(1311, 645);
+            this.deleteUserPanel.MinimumSize = new System.Drawing.Size(1102, 645);
+            this.deleteUserPanel.Name = "deleteUserPanel";
+            this.deleteUserPanel.Size = new System.Drawing.Size(1102, 645);
+            this.deleteUserPanel.TabIndex = 76;
             // 
-            // editlastName_txtBox
+            // deletelastName
             // 
-            this.editlastName_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.deletelastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.editlastName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editlastName_txtBox.Location = new System.Drawing.Point(765, 235);
-            this.editlastName_txtBox.Multiline = true;
-            this.editlastName_txtBox.Name = "editlastName_txtBox";
-            this.editlastName_txtBox.Size = new System.Drawing.Size(275, 26);
-            this.editlastName_txtBox.TabIndex = 35;
+            this.deletelastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletelastName.Location = new System.Drawing.Point(765, 235);
+            this.deletelastName.Multiline = true;
+            this.deletelastName.Name = "deletelastName";
+            this.deletelastName.Size = new System.Drawing.Size(275, 26);
+            this.deletelastName.TabIndex = 35;
             // 
-            // label3
+            // label6
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Sienna;
-            this.label3.Location = new System.Drawing.Point(566, 231);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 33);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Last Name:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Sienna;
+            this.label6.Location = new System.Drawing.Point(566, 231);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(161, 33);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Last Name:";
             // 
-            // editfirstName_txtBox
+            // deletefirstName
             // 
-            this.editfirstName_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.deletefirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.editfirstName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editfirstName_txtBox.Location = new System.Drawing.Point(765, 157);
-            this.editfirstName_txtBox.Multiline = true;
-            this.editfirstName_txtBox.Name = "editfirstName_txtBox";
-            this.editfirstName_txtBox.Size = new System.Drawing.Size(275, 26);
-            this.editfirstName_txtBox.TabIndex = 33;
+            this.deletefirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletefirstName.Location = new System.Drawing.Point(765, 157);
+            this.deletefirstName.Multiline = true;
+            this.deletefirstName.Name = "deletefirstName";
+            this.deletefirstName.Size = new System.Drawing.Size(275, 26);
+            this.deletefirstName.TabIndex = 33;
             // 
-            // firstName
+            // label11
             // 
-            this.firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.firstName.AutoSize = true;
-            this.firstName.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstName.ForeColor = System.Drawing.Color.Sienna;
-            this.firstName.Location = new System.Drawing.Point(566, 152);
-            this.firstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(158, 33);
-            this.firstName.TabIndex = 34;
-            this.firstName.Text = "First Name:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Sienna;
+            this.label11.Location = new System.Drawing.Point(566, 152);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(158, 33);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "First Name:";
             // 
-            // dataGridView
+            // deletedataGridView
             // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(37, 73);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(512, 524);
-            this.dataGridView.TabIndex = 32;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            this.deletedataGridView.AllowUserToAddRows = false;
+            this.deletedataGridView.AllowUserToDeleteRows = false;
+            this.deletedataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.deletedataGridView.Location = new System.Drawing.Point(37, 73);
+            this.deletedataGridView.Name = "deletedataGridView";
+            this.deletedataGridView.ReadOnly = true;
+            this.deletedataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.deletedataGridView.Size = new System.Drawing.Size(512, 524);
+            this.deletedataGridView.TabIndex = 32;
+            this.deletedataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deletedataGridView_CellContentClick);
             // 
-            // updateAccount
+            // deleteAccount
             // 
-            this.updateAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.deleteAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateAccount.BackColor = System.Drawing.Color.Sienna;
-            this.updateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateAccount.ForeColor = System.Drawing.Color.White;
-            this.updateAccount.Location = new System.Drawing.Point(765, 549);
-            this.updateAccount.Name = "updateAccount";
-            this.updateAccount.Size = new System.Drawing.Size(275, 48);
-            this.updateAccount.TabIndex = 31;
-            this.updateAccount.Text = "Update Account";
-            this.updateAccount.UseVisualStyleBackColor = false;
-            this.updateAccount.Click += new System.EventHandler(this.updateAccount_Click);
+            this.deleteAccount.BackColor = System.Drawing.Color.Sienna;
+            this.deleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAccount.ForeColor = System.Drawing.Color.White;
+            this.deleteAccount.Location = new System.Drawing.Point(765, 549);
+            this.deleteAccount.Name = "deleteAccount";
+            this.deleteAccount.Size = new System.Drawing.Size(275, 48);
+            this.deleteAccount.TabIndex = 31;
+            this.deleteAccount.Text = "Delete Account";
+            this.deleteAccount.UseVisualStyleBackColor = false;
+            this.deleteAccount.Click += new System.EventHandler(this.deleteAccount_Click);
             // 
-            // editcontactNo_txtBox
+            // deletecontactNo
             // 
-            this.editcontactNo_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.deletecontactNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.editcontactNo_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editcontactNo_txtBox.Location = new System.Drawing.Point(765, 391);
-            this.editcontactNo_txtBox.Multiline = true;
-            this.editcontactNo_txtBox.Name = "editcontactNo_txtBox";
-            this.editcontactNo_txtBox.Size = new System.Drawing.Size(275, 26);
-            this.editcontactNo_txtBox.TabIndex = 3;
+            this.deletecontactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletecontactNo.Location = new System.Drawing.Point(765, 391);
+            this.deletecontactNo.Multiline = true;
+            this.deletecontactNo.Name = "deletecontactNo";
+            this.deletecontactNo.Size = new System.Drawing.Size(275, 26);
+            this.deletecontactNo.TabIndex = 3;
             // 
-            // edituserName_txtBox
+            // deleteuserName
             // 
-            this.edituserName_txtBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.deleteuserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.edituserName_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edituserName_txtBox.Location = new System.Drawing.Point(765, 313);
-            this.edituserName_txtBox.Multiline = true;
-            this.edituserName_txtBox.Name = "edituserName_txtBox";
-            this.edituserName_txtBox.Size = new System.Drawing.Size(275, 26);
-            this.edituserName_txtBox.TabIndex = 2;
+            this.deleteuserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteuserName.Location = new System.Drawing.Point(765, 313);
+            this.deleteuserName.Multiline = true;
+            this.deleteuserName.Name = "deleteuserName";
+            this.deleteuserName.Size = new System.Drawing.Size(275, 26);
+            this.deleteuserName.TabIndex = 2;
             // 
-            // editID_txtbox
+            // deleteId
             // 
-            this.editID_txtbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.deleteId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.editID_txtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editID_txtbox.Location = new System.Drawing.Point(765, 79);
-            this.editID_txtbox.Multiline = true;
-            this.editID_txtbox.Name = "editID_txtbox";
-            this.editID_txtbox.Size = new System.Drawing.Size(79, 26);
-            this.editID_txtbox.TabIndex = 0;
-            this.editID_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.deleteId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteId.Location = new System.Drawing.Point(765, 79);
+            this.deleteId.Multiline = true;
+            this.deleteId.Name = "deleteId";
+            this.deleteId.Size = new System.Drawing.Size(79, 26);
+            this.deleteId.TabIndex = 0;
+            this.deleteId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // label13
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(432, 56);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Edit User Account";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Sienna;
+            this.label13.Location = new System.Drawing.Point(3, 4);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(502, 56);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Delete User Account";
             // 
-            // edituserType_comboBox
+            // deleteuserType
             // 
-            this.edituserType_comboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.deleteuserType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.edituserType_comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edituserType_comboBox.FormattingEnabled = true;
-            this.edituserType_comboBox.Items.AddRange(new object[] {
+            this.deleteuserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteuserType.FormattingEnabled = true;
+            this.deleteuserType.Items.AddRange(new object[] {
             "Manager",
             "User"});
-            this.edituserType_comboBox.Location = new System.Drawing.Point(765, 469);
-            this.edituserType_comboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.edituserType_comboBox.Name = "edituserType_comboBox";
-            this.edituserType_comboBox.Size = new System.Drawing.Size(275, 28);
-            this.edituserType_comboBox.TabIndex = 6;
+            this.deleteuserType.Location = new System.Drawing.Point(765, 469);
+            this.deleteuserType.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteuserType.Name = "deleteuserType";
+            this.deleteuserType.Size = new System.Drawing.Size(275, 28);
+            this.deleteuserType.TabIndex = 6;
             // 
-            // label2
+            // label14
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(566, 468);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 33);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "User Type:";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Sienna;
+            this.label14.Location = new System.Drawing.Point(566, 468);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(144, 33);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "User Type:";
             // 
-            // label9
+            // label15
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Sienna;
-            this.label9.Location = new System.Drawing.Point(566, 389);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(185, 33);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Contact No.:";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Sienna;
+            this.label15.Location = new System.Drawing.Point(566, 389);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(185, 33);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Contact No.:";
             // 
-            // label10
+            // label16
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Sienna;
-            this.label10.Location = new System.Drawing.Point(566, 310);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 33);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Username: ";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Sienna;
+            this.label16.Location = new System.Drawing.Point(566, 310);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(160, 33);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Username: ";
             // 
-            // label12
+            // label17
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Sienna;
-            this.label12.Location = new System.Drawing.Point(566, 73);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 33);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "I.D:";
-            // 
-            // adminDashboard_label
-            // 
-            this.adminDashboard_label.AutoSize = true;
-            this.adminDashboard_label.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminDashboard_label.ForeColor = System.Drawing.Color.Sienna;
-            this.adminDashboard_label.Location = new System.Drawing.Point(10, 14);
-            this.adminDashboard_label.Name = "adminDashboard_label";
-            this.adminDashboard_label.Size = new System.Drawing.Size(449, 56);
-            this.adminDashboard_label.TabIndex = 68;
-            this.adminDashboard_label.Text = "Admin Dashboard";
-            // 
-            // checkUserPanel
-            // 
-            this.checkUserPanel.BackColor = System.Drawing.Color.Tan;
-            this.checkUserPanel.Controls.Add(this.label4);
-            this.checkUserPanel.Controls.Add(this.pictureBox2);
-            this.checkUserPanel.Location = new System.Drawing.Point(263, 88);
-            this.checkUserPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.checkUserPanel.Name = "checkUserPanel";
-            this.checkUserPanel.Size = new System.Drawing.Size(181, 221);
-            this.checkUserPanel.TabIndex = 67;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(25, 139);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Check User Activity";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // checkManagerPanel
-            // 
-            this.checkManagerPanel.BackColor = System.Drawing.Color.Tan;
-            this.checkManagerPanel.Controls.Add(this.label5);
-            this.checkManagerPanel.Controls.Add(this.pictureBox3);
-            this.checkManagerPanel.Location = new System.Drawing.Point(263, 357);
-            this.checkManagerPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.checkManagerPanel.Name = "checkManagerPanel";
-            this.checkManagerPanel.Size = new System.Drawing.Size(181, 221);
-            this.checkManagerPanel.TabIndex = 67;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(7, 139);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Check Manager Activity";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // checkItemsPanel
-            // 
-            this.checkItemsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkItemsPanel.BackColor = System.Drawing.Color.Tan;
-            this.checkItemsPanel.Controls.Add(this.label8);
-            this.checkItemsPanel.Controls.Add(this.pictureBox5);
-            this.checkItemsPanel.Location = new System.Drawing.Point(724, 88);
-            this.checkItemsPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.checkItemsPanel.Name = "checkItemsPanel";
-            this.checkItemsPanel.Size = new System.Drawing.Size(181, 221);
-            this.checkItemsPanel.TabIndex = 67;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(46, 139);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 16);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Check Items";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // checkOrdersPanel
-            // 
-            this.checkOrdersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkOrdersPanel.BackColor = System.Drawing.Color.Tan;
-            this.checkOrdersPanel.Controls.Add(this.label7);
-            this.checkOrdersPanel.Controls.Add(this.pictureBox4);
-            this.checkOrdersPanel.Location = new System.Drawing.Point(724, 357);
-            this.checkOrdersPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.checkOrdersPanel.Name = "checkOrdersPanel";
-            this.checkOrdersPanel.Size = new System.Drawing.Size(181, 221);
-            this.checkOrdersPanel.TabIndex = 67;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(42, 139);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 16);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Check Orders";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(33, 17);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(110, 114);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // dashboardPanel
-            // 
-            this.dashboardPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dashboardPanel.Controls.Add(this.checkOrdersPanel);
-            this.dashboardPanel.Controls.Add(this.checkItemsPanel);
-            this.dashboardPanel.Controls.Add(this.checkManagerPanel);
-            this.dashboardPanel.Controls.Add(this.checkUserPanel);
-            this.dashboardPanel.Controls.Add(this.adminDashboard_label);
-            this.dashboardPanel.Location = new System.Drawing.Point(280, 168);
-            this.dashboardPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.dashboardPanel.MaximumSize = new System.Drawing.Size(1299, 627);
-            this.dashboardPanel.MinimumSize = new System.Drawing.Size(1090, 627);
-            this.dashboardPanel.Name = "dashboardPanel";
-            this.dashboardPanel.Size = new System.Drawing.Size(1090, 627);
-            this.dashboardPanel.TabIndex = 70;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Sienna;
+            this.label17.Location = new System.Drawing.Point(566, 73);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(55, 33);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "I.D:";
             // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1370, 794);
+            this.ClientSize = new System.Drawing.Size(1370, 795);
             this.Controls.Add(this.greetingPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.createUserPanel);
-            this.Controls.Add(this.editUserPanel);
             this.Controls.Add(this.dashboardPanel);
-            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.deleteUserPanel);
+            this.Controls.Add(this.editUserPanel);
+            this.Controls.Add(this.createUserPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminDashboard";
-            this.Load += new System.EventHandler(this.AdminDashboard_Load);
+            this.Text = "AdminDashboard1";
+            this.Load += new System.EventHandler(this.AdminDashboard1_Load);
+            this.editUserPanel.ResumeLayout(false);
+            this.editUserPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editDataGridView)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.menuContainer.ResumeLayout(false);
             this.menuContainer.PerformLayout();
@@ -1060,54 +1305,93 @@
             this.panel7.ResumeLayout(false);
             this.userManagementPanel.ResumeLayout(false);
             this.usersCatalogContainer.ResumeLayout(false);
+            this.dashboardPanel.ResumeLayout(false);
+            this.dashboardPanel.PerformLayout();
+            this.checkOrdersPanel.ResumeLayout(false);
+            this.checkOrdersPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.checkItemsPanel.ResumeLayout(false);
+            this.checkItemsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.checkManagerPanel.ResumeLayout(false);
+            this.checkManagerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.checkUserPanel.ResumeLayout(false);
+            this.checkUserPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.createUserPanel.ResumeLayout(false);
             this.createUserPanel.PerformLayout();
             this.greetingPanel.ResumeLayout(false);
             this.greetingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.editUserPanel.ResumeLayout(false);
-            this.editUserPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.checkUserPanel.ResumeLayout(false);
-            this.checkUserPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.checkManagerPanel.ResumeLayout(false);
-            this.checkManagerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.checkItemsPanel.ResumeLayout(false);
-            this.checkItemsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.checkOrdersPanel.ResumeLayout(false);
-            this.checkOrdersPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.dashboardPanel.ResumeLayout(false);
-            this.dashboardPanel.PerformLayout();
+            this.deleteUserPanel.ResumeLayout(false);
+            this.deleteUserPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deletedataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel editUserPanel;
+        private System.Windows.Forms.TextBox editlastName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox editfirstName;
+        private System.Windows.Forms.Label firstName;
+        private System.Windows.Forms.DataGridView editDataGridView;
+        private System.Windows.Forms.Button editAccount;
+        private System.Windows.Forms.TextBox editcontactNo;
+        private System.Windows.Forms.TextBox edituserName;
+        private System.Windows.Forms.TextBox editId;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox edituserType;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel menuContainer;
-        private System.Windows.Forms.PictureBox menu_btn;
         private System.Windows.Forms.Label menuLabel;
-        private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.PictureBox menu_btn;
         private System.Windows.Forms.Panel dashboardContainer;
         private System.Windows.Forms.Button dashboard_btn;
         private System.Windows.Forms.Panel userContainer;
-        private System.Windows.Forms.Panel userManagementPanel;
-        private System.Windows.Forms.Button userManagement_btn;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button createUser_btn;
-        private System.Windows.Forms.Timer userTimer;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button editUser_btn;
-        private System.Windows.Forms.Panel usersCatalogContainer;
-        private System.Windows.Forms.Button usersCatalog_btn;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button deleteUser_btn;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button editUser_btn;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button createUser_btn;
+        private System.Windows.Forms.Panel userManagementPanel;
+        private System.Windows.Forms.Button userManagement_btn;
+        private System.Windows.Forms.Panel usersCatalogContainer;
+        private System.Windows.Forms.Button userLists;
+        private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.Timer userTimer;
+        private System.Windows.Forms.Panel dashboardPanel;
+        private System.Windows.Forms.Panel checkOrdersPanel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel checkItemsPanel;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel checkManagerPanel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel checkUserPanel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label adminDashboard_label;
         private System.Windows.Forms.Panel createUserPanel;
+        private System.Windows.Forms.CheckBox showPass;
+        private System.Windows.Forms.Button createAccount;
+        private System.Windows.Forms.TextBox confirmPassword_txtBox;
+        private System.Windows.Forms.TextBox createPassword_txtBox;
+        private System.Windows.Forms.TextBox contactNo_txtBox;
+        private System.Windows.Forms.TextBox lastName_txtBox;
+        private System.Windows.Forms.TextBox userName_txtBox;
+        private System.Windows.Forms.TextBox firstName_txtBox;
+        private System.Windows.Forms.Label createuserAccount_label;
         private System.Windows.Forms.ComboBox userType_comboBox;
         private System.Windows.Forms.Label userType_label;
         private System.Windows.Forms.Label confirmPassword_label;
@@ -1116,48 +1400,25 @@
         private System.Windows.Forms.Label username_label;
         private System.Windows.Forms.Label lastName_label;
         private System.Windows.Forms.Label firstName_label;
-        private System.Windows.Forms.Label createuserAccount_label;
-        private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.TextBox firstName_txtBox;
-        private System.Windows.Forms.TextBox confirmPassword_txtBox;
-        private System.Windows.Forms.TextBox createPassword_txtBox;
-        private System.Windows.Forms.TextBox contactNo_txtBox;
-        private System.Windows.Forms.TextBox lastName_txtBox;
-        private System.Windows.Forms.TextBox userName_txtBox;
-        private System.Windows.Forms.Button createUserAccount_btn;
-        private System.Windows.Forms.CheckBox showPass;
         private System.Windows.Forms.Panel greetingPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label helloGreeting;
-        private System.Windows.Forms.Panel editUserPanel;
-        private System.Windows.Forms.Button updateAccount;
-        private System.Windows.Forms.TextBox editcontactNo_txtBox;
-        private System.Windows.Forms.TextBox edituserName_txtBox;
-        private System.Windows.Forms.TextBox editID_txtbox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox edituserType_comboBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.TextBox editfirstName_txtBox;
-        private System.Windows.Forms.Label firstName;
-        private System.Windows.Forms.TextBox editlastName_txtBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label adminDashboard_label;
-        private System.Windows.Forms.Panel checkUserPanel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel checkManagerPanel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel checkItemsPanel;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel checkOrdersPanel;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel dashboardPanel;
+        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.Panel deleteUserPanel;
+        private System.Windows.Forms.TextBox deletelastName;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox deletefirstName;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView deletedataGridView;
+        private System.Windows.Forms.Button deleteAccount;
+        private System.Windows.Forms.TextBox deletecontactNo;
+        private System.Windows.Forms.TextBox deleteuserName;
+        private System.Windows.Forms.TextBox deleteId;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox deleteuserType;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }
