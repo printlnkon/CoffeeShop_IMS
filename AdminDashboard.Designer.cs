@@ -234,9 +234,9 @@
             this.editDataGridView.Name = "editDataGridView";
             this.editDataGridView.ReadOnly = true;
             this.editDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.editDataGridView.Size = new System.Drawing.Size(468, 524);
+            this.editDataGridView.Size = new System.Drawing.Size(491, 524);
             this.editDataGridView.TabIndex = 32;
-            this.editDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EditDataGridView_CellContentClick);
+            this.editDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editDataGridView_CellContentClick);
             // 
             // editAccount
             // 
@@ -1061,6 +1061,7 @@
             // 
             // logout_btn
             // 
+            this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logout_btn.FlatAppearance.BorderSize = 0;
             this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1161,9 +1162,9 @@
             this.deletedataGridView.Name = "deletedataGridView";
             this.deletedataGridView.ReadOnly = true;
             this.deletedataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.deletedataGridView.Size = new System.Drawing.Size(468, 524);
+            this.deletedataGridView.Size = new System.Drawing.Size(491, 524);
             this.deletedataGridView.TabIndex = 32;
-            this.deletedataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeletedataGridView_CellContentClick);
+            this.deletedataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deletedataGridView_CellContentClick);
             // 
             // deleteAccount
             // 
@@ -1305,10 +1306,10 @@
             this.Controls.Add(this.greetingPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.dashboardPanel);
             this.Controls.Add(this.deleteUserPanel);
             this.Controls.Add(this.editUserPanel);
             this.Controls.Add(this.createUserPanel);
+            this.Controls.Add(this.dashboardPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

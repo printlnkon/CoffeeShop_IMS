@@ -417,7 +417,7 @@ namespace CoffeeShop_IMS
 
                     // Optional: Set auto-generate columns if needed
                     editDataGridView.AutoGenerateColumns = true;
-                    editDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                    editDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Fill the grid view
                 }
             }
             catch (MySqlException ex)
@@ -430,35 +430,37 @@ namespace CoffeeShop_IMS
                 // Handle general exceptions
                 MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // Auto-resize columns to fill the DataGridView
+            editDataGridView.AutoGenerateColumns = true;
+            editDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Fill the grid view
         }
-        private void EditDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void editDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                // Ensure the click is on a valid row (not a header or invalid row index)   
-                if (e.RowIndex >= 0 && e.RowIndex < editDataGridView.Rows.Count)
+                if (e.RowIndex >= 0) // Ensure it's not a header row
                 {
-                    // Get the selected row
-                    DataGridViewRow row = this.editDataGridView.Rows[e.RowIndex];
+                    DataGridViewRow row = editDataGridView.Rows[e.RowIndex];
 
-                    // Safely retrieve cell values and handle potential nulls
-                    editId.Text = row.Cells["id"]?.Value?.ToString() ?? string.Empty;
-                    editfirstName.Text = row.Cells["firstName"]?.Value?.ToString() ?? string.Empty;
-                    editlastName.Text = row.Cells["lastName"]?.Value?.ToString() ?? string.Empty;
-                    edituserName.Text = row.Cells["userName"]?.Value?.ToString() ?? string.Empty;
-                    editcontactNo.Text = row.Cells["contactNo"]?.Value?.ToString() ?? string.Empty;
-                    edituserType.Text = row.Cells["userType"]?.Value?.ToString() ?? string.Empty;
+                    // Use direct assignments without null-coalescing for performance
+                    editId.Text = row.Cells["id"].Value?.ToString();
+                    editfirstName.Text = row.Cells["firstName"].Value?.ToString();
+                    editlastName.Text = row.Cells["lastName"].Value?.ToString();
+                    edituserName.Text = row.Cells["userName"].Value?.ToString();
+                    editcontactNo.Text = row.Cells["contactNo"].Value?.ToString();
+                    edituserType.Text = row.Cells["userType"].Value?.ToString();
 
-                    // Make ID textbox read-only (optional)
-                    editId.ReadOnly = true;
+                    // Make the ID textbox read-only
+                    editId.Enabled = false;
                 }
             }
             catch (Exception ex)
             {
-                // Handle any unexpected errors
                 MessageBox.Show($"Error selecting data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         // ---------- end of edit user function ---------- //
 
 
@@ -535,12 +537,13 @@ namespace CoffeeShop_IMS
                     // Bind the DataTable to the DataGridView
                     deletedataGridView.DataSource = null; // Reset the data source (optional)
                     deletedataGridView.DataSource = dt;   // Assign the new data source
-                    // Ensure the grid refreshes properly
+                    // Ensure the grid refreshes properly   
                     deletedataGridView.Refresh();
 
                     // Optional: Set auto-generate columns if needed
                     deletedataGridView.AutoGenerateColumns = true;
-                    deletedataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                    deletedataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Fill the grid view
+
 
                 }
             }
@@ -555,7 +558,7 @@ namespace CoffeeShop_IMS
                 MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void DeletedataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void deletedataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -573,7 +576,13 @@ namespace CoffeeShop_IMS
                     deletecontactNo.Text = row.Cells["contactNo"]?.Value?.ToString()?.Trim() ?? string.Empty;
                     deleteuserType.Text = row.Cells["userType"]?.Value?.ToString()?.Trim() ?? string.Empty;
 
-                    deleteId.ReadOnly = true;
+                    deletefirstName.Enabled = false;
+                    deletelastName.Enabled = false;
+                    deleteuserName.Enabled = false;
+                    deletecontactNo.Enabled = false;
+                    deleteuserName.Enabled = false;
+                    deleteuserType.Enabled = false;
+                    deleteId.Enabled = false;
                 }
                 else
                 {
@@ -586,6 +595,8 @@ namespace CoffeeShop_IMS
                 MessageBox.Show($"Error selecting data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
         // ---------- end of delete user function ---------- //
 
         // ---------- start of user lists function ---------- //
@@ -596,9 +607,6 @@ namespace CoffeeShop_IMS
             ul.ShowDialog();
             this.Hide();
         }
-
-        
-
 
         // ---------- end of user lists function ---------- //
     }

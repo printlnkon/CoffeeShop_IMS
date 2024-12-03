@@ -33,6 +33,7 @@
             this.close_btn = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.logout_btn = new System.Windows.Forms.Button();
+            this.generatePDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userListsDataGridView)).BeginInit();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             this.userListsDataGridView.ReadOnly = true;
             this.userListsDataGridView.Size = new System.Drawing.Size(619, 357);
             this.userListsDataGridView.TabIndex = 0;
+            this.userListsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userListsDataGridView_CellContentClick);
             // 
             // close_btn
             // 
@@ -88,11 +90,28 @@
             this.logout_btn.TabIndex = 66;
             this.logout_btn.UseVisualStyleBackColor = true;
             // 
+            // generatePDF
+            // 
+            this.generatePDF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.generatePDF.BackColor = System.Drawing.Color.Sienna;
+            this.generatePDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generatePDF.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generatePDF.ForeColor = System.Drawing.Color.White;
+            this.generatePDF.Location = new System.Drawing.Point(35, 495);
+            this.generatePDF.Name = "generatePDF";
+            this.generatePDF.Size = new System.Drawing.Size(275, 48);
+            this.generatePDF.TabIndex = 76;
+            this.generatePDF.Text = "Generate PDF";
+            this.generatePDF.UseVisualStyleBackColor = false;
+            this.generatePDF.Click += new System.EventHandler(this.generatePDF_Click);
+            // 
             // UserLists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 498);
+            this.ClientSize = new System.Drawing.Size(691, 563);
+            this.Controls.Add(this.generatePDF);
             this.Controls.Add(this.userListsDataGridView);
             this.Controls.Add(this.headerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -112,5 +131,6 @@
         private System.Windows.Forms.Button close_btn;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Button logout_btn;
+        private System.Windows.Forms.Button generatePDF;
     }
 }

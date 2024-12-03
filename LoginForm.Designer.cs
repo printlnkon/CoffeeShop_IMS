@@ -63,9 +63,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(26, 277);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(207, 66);
+            this.label7.Size = new System.Drawing.Size(219, 66);
             this.label7.TabIndex = 12;
-            this.label7.Text = "CSMS:\r\nCoffee Shop\r\nManagement System\r\n";
+            this.label7.Text = "CSIMS:\r\nCoffee Shop Inventory \r\nManagement System\r\n";
             // 
             // label1
             // 

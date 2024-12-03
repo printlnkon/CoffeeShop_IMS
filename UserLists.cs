@@ -1,13 +1,10 @@
-﻿using Google.Protobuf.Reflection;
+﻿using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using System.IO;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CoffeeShop_IMS
@@ -56,9 +53,80 @@ namespace CoffeeShop_IMS
 
         private void Close_btn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AdminDashboard ad = new AdminDashboard();
-            ad.ShowDialog();
+            ad.Show();
             this.Close();
+        }
+
+        private void userListsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            userListsDataGridView.AutoGenerateColumns = true;
+            userListsDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Fill the grid view
+        }
+
+        // STILL NOT WORKING!
+        private void generatePDF_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Prompt the user to select a file location
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "PDF files (*.pdf)|*.pdf",
+                    Title = "Save PDF File"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    // Create a PDF writer instance
+                    using (PdfWriter writer = new PdfWriter(filePath))
+                    {
+                        PdfDocument pdfDoc = new PdfDocument(writer);
+                        Document document = new Document(pdfDoc);
+
+                        // Add a title to the PDF
+                        document.Add(new Paragraph("User List")
+                            .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
+                            .SetFontSize(20));
+
+                        // Create a table with the same number of columns as the DataGridView
+                        Table table = new Table(userListsDataGridView.Columns.Count);
+
+                        // Add column headers to the table
+                        foreach (DataGridViewColumn column in userListsDataGridView.Columns)
+                        {
+                            table.AddHeaderCell(new Cell().Add(new Paragraph(column.HeaderText)));
+                        }
+
+                        // Add rows from DataGridView to the table
+                        foreach (DataGridViewRow row in userListsDataGridView.Rows)
+                        {
+                            // Skip empty rows
+                            if (!row.IsNewRow)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    string cellValue = cell.Value?.ToString() ?? string.Empty;
+                                    table.AddCell(new Cell().Add(new Paragraph(cellValue)));
+                                }
+                            }
+                        }
+
+                        // Add the table to the document
+                        document.Add(table);
+                        document.Close();
+                    }
+
+                    MessageBox.Show("PDF generated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error generating PDF: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

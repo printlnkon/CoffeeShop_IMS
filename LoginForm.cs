@@ -47,13 +47,13 @@ namespace CoffeeShop_IMS
                             this.Hide();
                             ud.Show();
                         }
-                        //if ((string)reader["usertype"].ToString() == "Manager")
-                        //{
-                        //    ManagerDashboard md = new ManagerDashboard();
-                        //    this.Hide();
-                        //    md.Show();
-                        //}
-                       
+                        if ((string)reader["usertype"].ToString() == "Manager")
+                        {
+                            ManagerDashboard md = new ManagerDashboard();
+                            this.Hide();
+                            md.Show();
+                        }
+
                     }
                 }
                 else
