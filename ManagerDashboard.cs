@@ -146,6 +146,7 @@ namespace CoffeeShop_IMS
                         // Clear fields and refresh grid
                         addItemName.Clear();
                         addQuantity.Clear();
+                        addType.SelectedIndex = -1;
                         addId.Text = string.Empty; // Clear ID field
                         addId.Focus();
                         FillAddGridView();

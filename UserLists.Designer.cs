@@ -102,7 +102,7 @@
             this.generatePDF.Name = "generatePDF";
             this.generatePDF.Size = new System.Drawing.Size(275, 48);
             this.generatePDF.TabIndex = 76;
-            this.generatePDF.Text = "Generate PDF";
+            this.generatePDF.Text = "Generate Users List PDF";
             this.generatePDF.UseVisualStyleBackColor = false;
             this.generatePDF.Click += new System.EventHandler(this.generatePDF_Click);
             // 

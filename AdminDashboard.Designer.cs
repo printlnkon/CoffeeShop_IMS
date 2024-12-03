@@ -1306,14 +1306,13 @@
             this.Controls.Add(this.greetingPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.deleteUserPanel);
             this.Controls.Add(this.editUserPanel);
             this.Controls.Add(this.createUserPanel);
             this.Controls.Add(this.dashboardPanel);
+            this.Controls.Add(this.deleteUserPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminDashboard1";
             this.Load += new System.EventHandler(this.AdminDashboard1_Load);
             this.editUserPanel.ResumeLayout(false);
             this.editUserPanel.PerformLayout();

@@ -52,6 +52,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.helloGreeting = new System.Windows.Forms.Label();
             this.addItemPanel = new System.Windows.Forms.Panel();
+            this.addType = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.addItemName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.addType = new System.Windows.Forms.ComboBox();
             this.headerPanel.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.menuContainer.SuspendLayout();
@@ -378,6 +378,19 @@
             this.addItemPanel.Size = new System.Drawing.Size(1102, 645);
             this.addItemPanel.TabIndex = 78;
             // 
+            // addType
+            // 
+            this.addType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addType.FormattingEnabled = true;
+            this.addType.Items.AddRange(new object[] {
+            "Consumables",
+            "Equipment and Tools",
+            "Raw Materials"});
+            this.addType.Location = new System.Drawing.Point(765, 235);
+            this.addType.Name = "addType";
+            this.addType.Size = new System.Drawing.Size(275, 28);
+            this.addType.TabIndex = 37;
+            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -427,7 +440,7 @@
             this.adddataGridView.Name = "adddataGridView";
             this.adddataGridView.ReadOnly = true;
             this.adddataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.adddataGridView.Size = new System.Drawing.Size(468, 524);
+            this.adddataGridView.Size = new System.Drawing.Size(489, 524);
             this.adddataGridView.TabIndex = 32;
             this.adddataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdddataGridView_CellContentClick);
             // 
@@ -477,9 +490,9 @@
             this.label13.ForeColor = System.Drawing.Color.Sienna;
             this.label13.Location = new System.Drawing.Point(3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(240, 56);
+            this.label13.Size = new System.Drawing.Size(316, 56);
             this.label13.TabIndex = 20;
-            this.label13.Text = "Add Item";
+            this.label13.Text = "Add Product";
             // 
             // label16
             // 
@@ -508,19 +521,6 @@
             this.label17.Size = new System.Drawing.Size(55, 33);
             this.label17.TabIndex = 5;
             this.label17.Text = "I.D:";
-            // 
-            // addType
-            // 
-            this.addType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addType.FormattingEnabled = true;
-            this.addType.Items.AddRange(new object[] {
-            "Consumables",
-            "Equipment and Tools",
-            "Raw Materials"});
-            this.addType.Location = new System.Drawing.Point(765, 235);
-            this.addType.Name = "addType";
-            this.addType.Size = new System.Drawing.Size(275, 28);
-            this.addType.TabIndex = 37;
             // 
             // ManagerDashboard
             // 
